@@ -83,7 +83,8 @@ p, li { max-width: 70ch; }
 .article-body p,
 .back-link,
 .section-note,
-.archive-date { margin: 0; }
+.archive-date,
+.start-list p { margin: 0; }
 
 .brand,
 .tagline,
@@ -158,12 +159,41 @@ h1, h2, h3, h4 {
 .main-column,
 .article-body { min-width: 0; }
 
+.start-here,
 .lead-story,
 .sidebar-block,
 .year-block,
 .related-section {
   background: var(--paper);
   border: 1px solid var(--line);
+}
+
+.start-here {
+  padding: 22px 24px;
+  margin-bottom: 28px;
+}
+
+.start-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.start-list li {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.start-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.start-list h3 {
+  font-size: 1.28rem;
+  margin-bottom: 4px;
 }
 
 .lead-story {
@@ -243,6 +273,10 @@ h1, h2, h3, h4 {
   padding: 18px;
 }
 
+.note-block {
+  background: color-mix(in srgb, var(--paper) 82%, var(--paper-soft) 18%);
+}
+
 .sidebar-block h2 { font-size: 1.8rem; margin: 8px 0 12px; }
 
 .article-header {
@@ -291,6 +325,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   .page-shell { padding: 16px 0 52px; }
+  .start-here,
   .lead-story,
   .sidebar-block,
   .year-block,

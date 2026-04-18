@@ -20,10 +20,28 @@ function renderHeader(config) {
     </header>`;
 }
 
+function renderInline(text = '', config) {
+  const pattern = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let output = '';
+  let lastIndex = 0;
+
+  for (const match of text.matchAll(pattern)) {
+    output += escapeHtml(text.slice(lastIndex, match.index));
+    const label = escapeHtml(match[1]);
+    const rawHref = match[2].trim();
+    const href = rawHref.startsWith('post:') ? postUrl(config, rawHref.slice(5)) : rawHref;
+    output += `<a href="${escapeHtml(href)}">${label}</a>`;
+    lastIndex = match.index + match[0].length;
+  }
+
+  output += escapeHtml(text.slice(lastIndex));
+  return output;
+}
+
 function renderFooter(config) {
   return `
     <footer class="site-footer">
-      <p>${escapeHtml(config.author.name)} writes here about technology, culture, and the futures people keep trying to build.</p>
+      <p>${escapeHtml(config.siteName)} is a notebook by ${escapeHtml(config.author.name)}, about technology, culture, and the futures people keep trying to build.</p>
     </footer>`;
 }
 
@@ -64,12 +82,34 @@ function renderLead(config, post) {
       <p class="section-kicker">Latest post</p>
       <h2><a href="${postUrl(config, post.slug)}">${escapeHtml(post.title)}</a></h2>
       <p class="lead-date">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
-      <p class="lead-summary">${escapeHtml(post.summary)}</p>
+      <p class="lead-summary">${renderInline(post.summary, config)}</p>
       <div class="lead-body">
-        ${paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+        ${paragraphs.map((paragraph) => `<p>${renderInline(paragraph, config)}</p>`).join('')}
       </div>
       <p class="read-link"><a href="${postUrl(config, post.slug)}">Continue reading</a></p>
     </article>`;
+}
+
+function renderStartHere(config, postsBySlug) {
+  if (!Array.isArray(config.startHere) || !config.startHere.length) return '';
+  return `
+    <section class="start-here">
+      <div class="section-heading">
+        <p class="section-kicker">Start here</p>
+        <p class="section-note">A few good entry points if you want the shape of the archive fast.</p>
+      </div>
+      <ol class="start-list">
+        ${config.startHere.map((item) => {
+          const post = postsBySlug.get(item.slug);
+          const title = post?.title || item.title || item.slug;
+          return `
+            <li>
+              <h3><a href="${postUrl(config, item.slug)}">${escapeHtml(title)}</a></h3>
+              ${item.note ? `<p>${renderInline(item.note, config)}</p>` : ''}
+            </li>`;
+        }).join('')}
+      </ol>
+    </section>`;
 }
 
 function renderArchive(config, posts) {
@@ -83,7 +123,7 @@ function renderArchive(config, posts) {
             <span class="archive-date">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</span>
             <div class="archive-copy">
               <h4><a href="${postUrl(config, post.slug)}">${escapeHtml(post.title)}</a></h4>
-              <p>${escapeHtml(post.summary)}</p>
+              <p>${renderInline(post.summary, config)}</p>
             </div>
           </li>`).join('')}
       </ul>
@@ -92,19 +132,21 @@ function renderArchive(config, posts) {
 
 function homePage({ config, posts }) {
   const [lead, ...archive] = posts;
+  const postsBySlug = new Map(posts.map((post) => [post.slug, post]));
   return layout({
     title: config.siteName,
     config,
     body: `
       <main class="front-page">
         <section class="masthead">
-          <p class="issue-line">${escapeHtml(config.author.name)}</p>
+          <p class="issue-line">${escapeHtml(config.homeKicker || `A notebook by ${config.author.name}`)}</p>
           <h1>${escapeHtml(config.siteName)}</h1>
-          <p class="masthead-deck">${escapeHtml(config.homeIntro || config.author.bio)}</p>
+          <p class="masthead-deck">${renderInline(config.homeIntro || config.author.bio, config)}</p>
         </section>
 
         <section class="front-grid">
           <div class="main-column">
+            ${renderStartHere(config, postsBySlug)}
             ${renderLead(config, lead)}
             <section class="archive-section">
               <div class="section-heading">
@@ -116,10 +158,15 @@ function homePage({ config, posts }) {
           </div>
 
           <aside class="sidebar">
+            ${config.homeNote ? `
+            <section class="sidebar-block note-block">
+              <p class="section-kicker">Editor's note</p>
+              <p>${renderInline(config.homeNote, config)}</p>
+            </section>` : ''}
             <section class="sidebar-block">
               <p class="section-kicker">About</p>
-              <h2>${escapeHtml(config.author.name)}</h2>
-              <p>${escapeHtml(config.author.bio)}</p>
+              <h2>About this notebook</h2>
+              <p>${renderInline(config.author.bio, config)}</p>
             </section>
           </aside>
         </section>
@@ -145,7 +192,7 @@ function renderRelated(config, post) {
         ${post.references.map((ref) => `
           <li>
             <a href="${postUrl(config, ref.slug)}">${escapeHtml(ref.title)}</a>
-            ${ref.note ? `<p>${escapeHtml(ref.note)}</p>` : ''}
+            ${ref.note ? `<p>${renderInline(ref.note, config)}</p>` : ''}
           </li>`).join('')}
       </ul>
     </section>`;
@@ -158,16 +205,16 @@ function articlePage({ config, post }) {
     config,
     body: `
       <main class="article-page">
-        <p class="back-link"><a href="${siteBase(config)}">← Back to the archive</a></p>
+        <p class="back-link"><a href="${siteBase(config)}">← Back to the notebook</a></p>
         <header class="article-header">
           <p class="section-kicker">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
           <h1>${escapeHtml(post.title)}</h1>
-          <p class="article-deck">${escapeHtml(post.summary)}</p>
+          <p class="article-deck">${renderInline(post.summary, config)}</p>
         </header>
 
         <div class="article-layout">
           <article class="article-body">
-            ${paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
+            ${paragraphs.map((paragraph) => `<p>${renderInline(paragraph, config)}</p>`).join('')}
             ${renderRelated(config, post)}
           </article>
 
@@ -272,7 +319,8 @@ p, li { max-width: 70ch; }
 .article-body p,
 .back-link,
 .section-note,
-.archive-date { margin: 0; }
+.archive-date,
+.start-list p { margin: 0; }
 
 .brand,
 .tagline,
@@ -347,12 +395,41 @@ h1, h2, h3, h4 {
 .main-column,
 .article-body { min-width: 0; }
 
+.start-here,
 .lead-story,
 .sidebar-block,
 .year-block,
 .related-section {
   background: var(--paper);
   border: 1px solid var(--line);
+}
+
+.start-here {
+  padding: 22px 24px;
+  margin-bottom: 28px;
+}
+
+.start-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.start-list li {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.start-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.start-list h3 {
+  font-size: 1.28rem;
+  margin-bottom: 4px;
 }
 
 .lead-story {
@@ -432,6 +509,10 @@ h1, h2, h3, h4 {
   padding: 18px;
 }
 
+.note-block {
+  background: color-mix(in srgb, var(--paper) 82%, var(--paper-soft) 18%);
+}
+
 .sidebar-block h2 { font-size: 1.8rem; margin: 8px 0 12px; }
 
 .article-header {
@@ -480,6 +561,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 640px) {
   .page-shell { padding: 16px 0 52px; }
+  .start-here,
   .lead-story,
   .sidebar-block,
   .year-block,
