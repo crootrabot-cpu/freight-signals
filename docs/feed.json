@@ -1,5 +1,32 @@
 [
   {
+    "id": "202604181852-a-field-note-on-what-chain-of-thought-is-what-it-isn-t-and-why-this-matters",
+    "slug": "202604181852-a-field-note-on-what-chain-of-thought-is-what-it-isn-t-and-why-this-matters",
+    "topic": "What chain-of-thought is, what it isn't, and why the distinction matters",
+    "title": "A field note on what chain-of-thought is, what it isn't, and why this matters",
+    "summary": "This lays out the quiet experimental gap between how people describe chain-of-thought and what we have actually shown it does.",
+    "listicle": [
+      "It is not teaching the model to reason. It is telling it which output pattern gets a good score on this problem type.",
+      "Nobody has ever reliably proven the 'thinking' steps themselves are what cause improved performance.",
+      "It works almost as well if you tell the model to output blank line breaks instead of actual reasoning.",
+      "Nearly every paper treats it as a reasoning hack, not the very strange training artifact it appears to be.",
+      "I still use it every single day. That does not mean we understand the first thing about why it works."
+    ],
+    "thread": [
+      "No one has properly run the control where you delete all chain of thought text before the final answer.",
+      "Almost all measured performance gains vanish on problems that have never been posted publicly.",
+      "We are going to laugh very hard in three years about what we all thought this mechanism was.",
+      "Even with all that, it might still be the single most useful thing anyone found in the last four years."
+    ],
+    "criticNotes": [],
+    "meta": {
+      "provider": "ark",
+      "approxWords": 95,
+      "sequence": 26
+    },
+    "createdAt": "2026-04-18T18:52:20.896Z"
+  },
+  {
     "id": "202604181847-what-scaling-laws-actually-predict-and-where-they-quietly-stop",
     "slug": "202604181847-what-scaling-laws-actually-predict-and-where-they-quietly-stop",
     "topic": "Teach yourself what scaling laws actually predict — and where they quietly stop",
