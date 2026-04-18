@@ -12,7 +12,7 @@
   <key>WorkingDirectory</key>
   <string>/Users/ra_bot/projects/logistics-alter-ego-blog</string>
   <key>StartInterval</key>
-  <integer>600</integer>
+  <integer>300</integer>
   <key>RunAtLoad</key>
   <true/>
   <key>StandardOutPath</key>

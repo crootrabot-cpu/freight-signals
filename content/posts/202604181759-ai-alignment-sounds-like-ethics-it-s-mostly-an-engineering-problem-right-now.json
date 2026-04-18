@@ -1,0 +1,43 @@
+{
+  "id": "202604181759-ai-alignment-sounds-like-ethics-it-s-mostly-an-engineering-problem-right-now",
+  "slug": "202604181759-ai-alignment-sounds-like-ethics-it-s-mostly-an-engineering-problem-right-now",
+  "topic": "Why 'alignment' sounds like ethics but often reduces to an engineering discipline problem",
+  "title": "AI alignment sounds like ethics. It's mostly an engineering problem right now.",
+  "summary": "This post outlines how alignment discourse has quietly drifted from moral questions about what AI should do, to technical problems about getting it to reliably do anything you tell it at all.",
+  "listicle": [
+    "Nobody is arguing about trolley problems anymore. Almost all active alignment research right now is about stopping models from lying or ignoring instructions.",
+    "This is equivalent to not asking \"should we build this bridge?\" first, but \"will this bridge actually stay up when you drive on it?\"",
+    "This is not a failure. You cannot have ethical debates about a system you cannot reliably control at all.",
+    "We just never name this shift out loud. Everyone keeps using the old ethics vocabulary for the new engineering work.",
+    "I don't know if this drift will make the actual hard ethical questions easier, or make us forget we ever needed to ask them."
+  ],
+  "thread": [
+    "The weirdest part: almost no one will disagree with this if you say it quietly, off stage.",
+    "Most critics of alignment work are also arguing about engineering reliability, just disagreeing on failure modes.",
+    "We will only be doing actual ethical alignment the day someone intentionally turns down a capability for moral reasons. That has not happened yet.",
+    "It is fine that this is engineering right now. It is not fine that we pretend otherwise."
+  ],
+  "criticNotes": [
+    {
+      "critic": "Rhea Coil",
+      "role": "First Principles Reader",
+      "note": "You're skipping the core split: even engineering reliability here requires defining what 'obey' means. That is never a value neutral definition."
+    },
+    {
+      "critic": "Jonah Slate",
+      "role": "Measurement Hawk",
+      "note": "Show me the numbers. Cite what share of alignment papers published in the last 12 months are ethics vs engineering. You haven't provided that baseline."
+    },
+    {
+      "critic": "Priya March",
+      "role": "Plain Language Coach",
+      "note": "You keep saying 'we'. Who is we? Researchers? Companies? Commentators? This is three separate groups with three completely different incentives."
+    }
+  ],
+  "meta": {
+    "provider": "ark",
+    "approxWords": 110,
+    "sequence": 15
+  },
+  "createdAt": "2026-04-18T17:59:17.035Z"
+}

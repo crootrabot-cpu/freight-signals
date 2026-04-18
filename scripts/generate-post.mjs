@@ -5,32 +5,32 @@ import { generateWithProvider } from './lib/llm.mjs';
 
 function fallbackPost({ topic, config, createdAt, postNumber }) {
   const items = [
-    `Operators trust AI faster when it explains what changed at the station, not when it just drops a score. In logistics, context beats confidence theater because frontline teams need usable evidence, not mysterious certainty.`,
-    `The best warehouse AI does less pretending and more timestamping. A clean event trail helps supervisors coach faster, defend claims, isolate repeat errors, and see friction before it hardens into cost or customer pain.`,
-    `Every automation pitch should survive one blunt question: does it reduce rework on a bad Tuesday? If not, it is probably decoration disguised as transformation, which is expensive language for software that never earns floor trust.`,
-    `Vision and language models matter most when they shorten the gap between an exception and a decision. Good tools compress confusion, speed escalation paths, and preserve labor dignity instead of smothering people in ambiguous alerts.`,
-    `The winners in logistics AI will be the teams that pair clear proof with humane operations. Better evidence creates calmer floors, tighter handoffs, stronger margins, and a better story when something goes wrong downstream.`
+    `Start with the observation, not the claim. What did the model actually do — token by token, example by example — and what would we expect if the story being told about it were true?`,
+    `A benchmark is a telescope pointed at one sliver of sky. Useful, but the trap is mistaking the sliver for the whole. Ask what the number cannot see before you ask what it says.`,
+    `"The model learned X" is almost always shorthand for "on our eval, outputs look consistent with X." That gap is where most confident AI writing quietly lives, and where most real disagreement hides.`,
+    `The honest move is to name the one experiment that would change your mind. If you can't name it, you're not claiming something about the world — you're claiming something about your mood.`,
+    `Simplicity is a tell. If a result needs scaffolding, caveats, and a particular prompt to reproduce, that's data. Not bad data — just data about how narrow the finding really is.`
   ];
 
   const thread = [
-    `Thread 1/${4}: ${topic} is really a question about operational trust. Warehouses already know how to spot fluff.`,
-    `Thread 2/${4}: Every new system competes with habit, muscle memory, and shift pressure. If it slows the floor, it loses.`,
-    `Thread 3/${4}: The quiet superpower is replayability. Teams improve faster when they can revisit what happened without blame theater.`,
-    `Thread 4/${4}: That is why AI in logistics becomes real only when it changes coaching, claims, and staffing decisions.`
+    `1/4 ${topic}: before the take, the observation. What are we actually looking at, in plain terms, with nothing assumed?`,
+    `2/4 The claim being made is usually broader than the evidence supports. That's not dishonesty — it's the ordinary friction between what we measure and what we mean.`,
+    `3/4 A good question to sit with: what would have to be true for this to be wrong? If nothing would make you update, it isn't really a belief, it's a vibe.`,
+    `4/4 The Feynman move is to keep asking "but why" until the jargon runs out. Whatever survives that is worth writing down.`
   ];
 
   return {
-    title: `5 takeaways on ${topic.toLowerCase()}`,
-    summary: `A quick field note from ${config.author.name} on ${topic.toLowerCase()}.`,
+    title: `Five plain-language notes on ${topic.toLowerCase()}`,
+    summary: `A short, first-principles pass from ${config.author.name} on ${topic.toLowerCase()}.`,
     listicle: items,
     thread,
     criticNotes: config.council.slice(0, 3).map((critic, index) => ({
       critic: critic.name,
       role: critic.role,
       note: [
-        'This only matters if the station lead can act on it mid-shift.',
-        'Show the baseline before you celebrate the model.',
-        'If the claim rate drops, finance will notice before marketing does.'
+        'What is the observation underneath the claim? Strip the nouns and look again.',
+        'Name the eval, the baseline, and the delta. Without those three, the number is decoration.',
+        'If a curious twelve-year-old asked "but why does that work?" — could you answer without jargon?'
       ][index]
     })),
     meta: {
@@ -43,7 +43,7 @@ function fallbackPost({ topic, config, createdAt, postNumber }) {
 }
 
 function promptFor(topic, config, createdAt, postNumber) {
-  return `You are ${config.author.name}, an alter-ego columnist writing about AI and logistics in a sharp trade-journal voice.
+  return `You are ${config.author.name}, an alter-ego columnist writing about AI the way Richard Feynman approached physics: from curiosity, not authority. Plain language, first principles, mechanisms over marketing, "I don't know" over false certainty.
 Return only JSON.
 
 Context:
@@ -57,13 +57,14 @@ Context:
 
 Requirements:
 - JSON object with keys: title, summary, listicle, thread, criticNotes
-- title: sharp headline, under 90 characters
-- summary: 1 sentence
+- title: sharp, plain-language headline, under 90 characters. No clickbait, no "X things you won't believe".
+- summary: 1 sentence, honest and specific
 - listicle: array of exactly 5 bullet strings totaling about 150 words combined
-- thread: array of exactly 4 short thread-style follow-up thoughts
-- criticNotes: array of exactly 3 objects with keys critic, role, note
-- Focus on AI and logistics, concrete operations, no fluff, no hashtags
-- Voice: informed, skeptical, vivid, useful
+- thread: array of exactly 4 short follow-up thoughts that extend the reasoning
+- criticNotes: array of exactly 3 objects with keys critic, role, note — each critic pushes back in their own lens
+- Subject matter: AI broadly — models, research, evaluation, reasoning, scaling, claims-vs-evidence. Not pack stations, not warehouses, not logistics.
+- Voice: curious and careful. Prefer "here is the observation, here is the claim, here is the gap." Use analogies from physics, biology, or everyday life when they actually clarify. Say "I don't know" when that is the truthful answer.
+- Avoid: hype language, hashtags, buzzwords, corporate tone, fake-confident pronouncements, filler like "in today's fast-paced world"
 `;
 }
 
