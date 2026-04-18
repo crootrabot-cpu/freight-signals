@@ -1,0 +1,43 @@
+{
+  "id": "202604181815-when-ai-uses-tools-skill-or-just-memorized-choreography",
+  "slug": "202604181815-when-ai-uses-tools-skill-or-just-memorized-choreography",
+  "topic": "Tool use in language models: what is actually a skill and what is just surface pattern",
+  "title": "When AI uses tools: skill, or just memorized choreography?",
+  "summary": "This post breaks down the unproven gap between language models repeating observed tool use patterns and actually possessing general tool skill.",
+  "listicle": [
+    "Most model tool use today works like someone reciting a memorized recipe, not understanding why each step matters.",
+    "Rearrange trivial, irrelevant details of a tool's interface, and almost all models will break completely.",
+    "We currently have no reliable test that can tell the difference between pattern matching and actual skill here.",
+    "This is not a minor flaw: it means we cannot trust models to use any tool that has never been written about online.",
+    "I don't know where the line crosses from pattern to real skill, and nobody else has proven they do either."
+  ],
+  "thread": [
+    "The first valid test of tool skill will be one nobody could possibly have added to training data.",
+    "It is notable that models remain perfectly confident even when they are completely failing at tool use.",
+    "Almost all evaluation we run ends up measuring training data quality, not model capability.",
+    "No one has ever documented a model inventing a new, useful way to use an existing common tool."
+  ],
+  "criticNotes": [
+    {
+      "critic": "Rhea Coil",
+      "role": "foundations",
+      "note": "You are dodging the core foundation question here. You cannot draw a line between pattern and skill until you first define what you even mean by 'skill'."
+    },
+    {
+      "critic": "Jonah Slate",
+      "role": "evidence",
+      "note": "You say there's no good test. You should add that every published paper claiming general tool skill uses tests that already existed in public training data."
+    },
+    {
+      "critic": "Priya March",
+      "role": "clarity",
+      "note": "The recipe analogy lands. But you haven't given one concrete trivial interface change that breaks models. Stop stating, show one tiny example."
+    }
+  ],
+  "meta": {
+    "provider": "ark",
+    "approxWords": 94,
+    "sequence": 19
+  },
+  "createdAt": "2026-04-18T18:15:28.451Z"
+}
