@@ -127,6 +127,13 @@ function homePage({ config, posts }) {
   });
 }
 
+function displayTopic(topic = '') {
+  for (const marker of [' when ', ' as ', ' after ', ' once ', ' while ', ' now that ']) {
+    if (topic.includes(marker)) return topic.split(marker)[0];
+  }
+  return topic;
+}
+
 function renderRelated(config, post) {
   if (!Array.isArray(post.references) || !post.references.length) return '';
   return `
@@ -167,7 +174,7 @@ function articlePage({ config, post }) {
           <aside class="sidebar article-sidebar">
             <section class="sidebar-block">
               <p class="section-kicker">Filed under</p>
-              <p>${escapeHtml(post.topic)}</p>
+              <p>${escapeHtml(displayTopic(post.topic))}</p>
             </section>
             <section class="sidebar-block">
               <p class="section-kicker">Published</p>
