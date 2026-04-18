@@ -34,6 +34,33 @@
     }
   },
   {
+    "id": "202604181858-what-people-skip-when-talking-about-solving-llm-hallucinations",
+    "slug": "202604181858-what-people-skip-when-talking-about-solving-llm-hallucinations",
+    "topic": "What would you need to believe for LLM hallucinations to be solvable — and what evidence would actually change that",
+    "title": "What people skip when talking about solving LLM hallucinations",
+    "summary": "This breaks down the unstated beliefs required to claim hallucinations are solvable, and what real evidence would shift the debate.",
+    "listicle": [
+      "You first have to believe there exists a single stable correct answer for most questions people actually ask.",
+      "You need to accept factual recall is not structurally tangled up with how these models generate text at all.",
+      "You have to assume nobody will ever ask a model anything ambiguous, unproven, or contested on purpose.",
+      "You need to ignore that we cannot even reliably define a hallucination once you leave trivial fact checks.",
+      "Most of all, you have to believe we have not already hit the soft ceiling on this particular problem."
+    ],
+    "thread": [
+      "Nobody ever runs hallucination tests on the messy unscripted questions normal users actually type.",
+      "Nearly every demoed fix only performs well on the exact dataset it was tuned against.",
+      "I have yet to see a paper that tests this after ten turns of open, meandering conversation.",
+      "The quiet unspoken thing is most people do not actually want perfectly accurate answers."
+    ],
+    "criticNotes": [],
+    "meta": {
+      "provider": "ark",
+      "approxWords": 91,
+      "sequence": 164
+    },
+    "createdAt": "2026-04-18T18:58:37.461Z"
+  },
+  {
     "id": "20260409-the-problem-with-slow-writing-is-usually-what-remains-when-convenience-becomes-a",
     "slug": "20260409-the-problem-with-slow-writing-is-usually-what-remains-when-convenience-becomes-a",
     "title": "The problem with slow writing is usually what remains when convenience becomes ambient",
