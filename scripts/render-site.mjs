@@ -2,10 +2,6 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { docsDir, escapeHtml, formatTimestamp, loadConfig, loadPosts, postUrl, siteBase } from './lib/site.mjs';
 
-function renderPostMeta(post, config) {
-  return `<div class="post-meta"><span>${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</span><span>${escapeHtml(post.topic)}</span><span>${escapeHtml(post.meta?.provider || 'unknown')}</span></div>`;
-}
-
 function layout({ title, body, config }) {
   const base = siteBase(config);
   return `<!doctype html>
@@ -20,91 +16,82 @@ function layout({ title, body, config }) {
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <div class="site-header-row">
-        <a class="brand" href="${base}">${escapeHtml(config.siteName)}</a>
-        <p class="tagline">${escapeHtml(config.tagline)}</p>
-      </div>
+      <a class="brand" href="${base}">${escapeHtml(config.siteName)}</a>
+      <p class="tagline">${escapeHtml(config.tagline)}</p>
     </header>
     ${body}
     <footer class="site-footer">
-      <p>Written by ${escapeHtml(config.author.name)}. Critiqued by the council. Rendered in ${escapeHtml(config.timezone)}.</p>
+      <p>${escapeHtml(config.author.name)} writes here about AI, evidence, and clear thinking.</p>
     </footer>
   </div>
 </body>
 </html>`;
 }
 
+function frontLead({ config, post }) {
+  if (!post) return '<p>No posts yet.</p>';
+  return `
+    <article class="lead-story">
+      <p class="section-kicker">Latest essay</p>
+      <h2><a href="${postUrl(config, post.slug)}">${escapeHtml(post.title)}</a></h2>
+      <p class="lead-summary">${escapeHtml(post.summary)}</p>
+      <p class="lead-date">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
+      <div class="lead-excerpt">
+        ${post.listicle.slice(0, 2).map((item) => `<p>${escapeHtml(item)}</p>`).join('')}
+      </div>
+      <p class="read-link"><a href="${postUrl(config, post.slug)}">Read the full essay</a></p>
+    </article>`;
+}
+
+function archiveList({ config, posts }) {
+  if (!posts.length) return '<p class="empty-state">No archive entries yet.</p>';
+  return `
+    <ul class="archive-list">
+      ${posts.map((post) => `
+        <li class="archive-item">
+          <p class="archive-date">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
+          <div class="archive-copy">
+            <h3><a href="${postUrl(config, post.slug)}">${escapeHtml(post.title)}</a></h3>
+            <p>${escapeHtml(post.summary)}</p>
+          </div>
+        </li>`).join('')}
+    </ul>`;
+}
+
 function homePage({ config, posts }) {
   const [lead, ...archive] = posts;
-  const archiveMarkup = archive.slice(0, 18).map((post) => `
-    <li class="archive-item">
-      <p class="archive-date">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
-      <div>
-        <h3><a href="${postUrl(config, post.slug)}">${escapeHtml(post.title)}</a></h3>
-        <p>${escapeHtml(post.summary)}</p>
-      </div>
-    </li>`).join('');
-
-  const councilMarkup = config.council.map((critic) => `
-    <li>
-      <h3>${escapeHtml(critic.name)}</h3>
-      <p class="rail-role">${escapeHtml(critic.role)}</p>
-      <p>${escapeHtml(critic.bio)}</p>
-    </li>`).join('');
-
-  const leadMarkup = lead ? `
-    <article class="lead-story">
-      <p class="kicker">Latest dispatch</p>
-      <h2><a href="${postUrl(config, lead.slug)}">${escapeHtml(lead.title)}</a></h2>
-      <p class="lead-summary">${escapeHtml(lead.summary)}</p>
-      ${renderPostMeta(lead, config)}
-      <ol class="lead-points">
-        ${lead.listicle.slice(0, 3).map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-      </ol>
-      <p class="lead-link"><a href="${postUrl(config, lead.slug)}">Read the full thread</a></p>
-    </article>` : '<p>No posts yet.</p>';
-
   return layout({
     title: config.siteName,
     config,
     body: `
       <main class="front-page">
         <section class="masthead">
-          <p class="issue-line">Issue ${posts.length || 0} · Updated ${escapeHtml(formatTimestamp(posts[0]?.createdAt || new Date().toISOString(), config.timezone))}</p>
+          <p class="issue-line">${escapeHtml(config.author.name)}</p>
           <h1>${escapeHtml(config.siteName)}</h1>
-          <p class="masthead-deck">A sharp, skeptical notebook on AI, written for people who want mechanisms instead of slogans. ${escapeHtml(config.author.name)} writes in public, then lets the council pull at the loose threads.</p>
+          <p class="masthead-deck">${escapeHtml(config.homeIntro || config.author.bio)}</p>
         </section>
 
         <section class="front-grid">
-          <div class="primary-column">
-            ${leadMarkup}
+          <div class="main-column">
+            ${frontLead({ config, post: lead })}
             <section class="archive-section">
-              <div class="section-label-row">
-                <p class="section-label">Archive</p>
-                <p class="section-note">Recent pieces, newest first.</p>
+              <div class="section-heading">
+                <p class="section-kicker">Archive</p>
+                <p class="section-note">Recent essays, newest first.</p>
               </div>
-              <ul class="archive-list">${archiveMarkup}</ul>
+              ${archiveList({ config, posts: archive.slice(0, 14) })}
             </section>
           </div>
 
-          <aside class="rail">
-            <section class="rail-block author-block">
-              <p class="section-label">About the columnist</p>
+          <aside class="sidebar">
+            <section class="sidebar-block">
+              <p class="section-kicker">About</p>
               <h2>${escapeHtml(config.author.name)}</h2>
               <p>${escapeHtml(config.author.bio)}</p>
             </section>
-
-            <section class="rail-block">
-              <div class="section-label-row">
-                <p class="section-label">Council of critics</p>
-                <p class="section-note">Four recurring lenses.</p>
-              </div>
-              <ul class="council-list">${councilMarkup}</ul>
-            </section>
-
-            <section class="rail-block process-block">
-              <p class="section-label">Publishing rhythm</p>
-              <p>New entries land every ten minutes. The front page stays spare on purpose, so the writing does the work.</p>
+            <section class="sidebar-block">
+              <p class="section-kicker">What this is</p>
+              <p>${escapeHtml(config.sidebarNote || 'A plainspoken blog for sorting out what is real, what is overstated, and what is still unresolved in AI.')}</p>
             </section>
           </aside>
         </section>
@@ -112,352 +99,309 @@ function homePage({ config, posts }) {
   });
 }
 
-function postPage({ config, post }) {
-  const critics = post.criticNotes.map((note) => `
-    <li>
-      <h3>${escapeHtml(note.critic)}</h3>
-      <p class="rail-role">${escapeHtml(note.role)}</p>
-      <p>${escapeHtml(note.note)}</p>
-    </li>`).join('');
+function articlePage({ config, post }) {
+  return layout({
+    title: post.title,
+    config,
+    body: `
+      <main class="article-page">
+        <p class="back-link"><a href="${siteBase(config)}">← Back to all essays</a></p>
+        <header class="article-header">
+          <p class="section-kicker">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
+          <h1>${escapeHtml(post.title)}</h1>
+          <p class="article-deck">${escapeHtml(post.summary)}</p>
+        </header>
 
-  const body = `
-    <main class="article-page">
-      <p class="back-link"><a href="${siteBase(config)}">← Back to front page</a></p>
+        <div class="article-layout">
+          <article class="article-body">
+            <section class="story-section">
+              <div class="section-heading compact">
+                <p class="section-kicker">Main notes</p>
+              </div>
+              <ol class="numbered-list">
+                ${post.listicle.map((item, index) => `
+                  <li>
+                    <span class="list-number">${String(index + 1).padStart(2, '0')}</span>
+                    <p>${escapeHtml(item)}</p>
+                  </li>`).join('')}
+              </ol>
+            </section>
 
-      <header class="article-header">
-        <p class="kicker">${escapeHtml(formatTimestamp(post.createdAt, config.timezone))}</p>
-        <h1>${escapeHtml(post.title)}</h1>
-        <p class="article-deck">${escapeHtml(post.summary)}</p>
-        ${renderPostMeta(post, config)}
-      </header>
+            <section class="story-section more-thoughts">
+              <div class="section-heading compact">
+                <p class="section-kicker">Further thoughts</p>
+              </div>
+              <ul class="notes-list">
+                ${post.thread.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
+              </ul>
+            </section>
+          </article>
 
-      <div class="article-layout">
-        <article class="article-main">
-          <section class="story-section">
-            <div class="section-label-row">
-              <p class="section-label">Listicle</p>
-              <p class="section-note">Five points, written to be read in one sitting.</p>
-            </div>
-            <ol class="numbered-list">
-              ${post.listicle.map((item, index) => `
-                <li>
-                  <span class="list-number">${String(index + 1).padStart(2, '0')}</span>
-                  <p>${escapeHtml(item)}</p>
-                </li>`).join('')}
-            </ol>
-          </section>
-
-          <section class="story-section">
-            <div class="section-label-row">
-              <p class="section-label">Thread</p>
-              <p class="section-note">Loose ends, counterpoints, and afterthoughts.</p>
-            </div>
-            <ul class="thread-list">${post.thread.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-          </section>
-        </article>
-
-        <aside class="article-rail">
-          <section class="rail-block">
-            <p class="section-label">Story notes</p>
-            <dl class="story-notes">
-              <div><dt>Topic</dt><dd>${escapeHtml(post.topic)}</dd></div>
-              <div><dt>Provider</dt><dd>${escapeHtml(post.meta?.provider || 'unknown')}</dd></div>
-              <div><dt>Approx words</dt><dd>${escapeHtml(String(post.meta?.approxWords || 0))}</dd></div>
-            </dl>
-          </section>
-
-          <section class="rail-block">
-            <div class="section-label-row">
-              <p class="section-label">Council reactions</p>
-              <p class="section-note">The recurring objections.</p>
-            </div>
-            <ul class="council-list">${critics}</ul>
-          </section>
-        </aside>
-      </div>
-    </main>`;
-
-  return layout({ title: post.title, body, config });
+          <aside class="sidebar article-sidebar">
+            <section class="sidebar-block">
+              <p class="section-kicker">Filed under</p>
+              <p>${escapeHtml(post.topic)}</p>
+            </section>
+            <section class="sidebar-block">
+              <p class="section-kicker">About the writer</p>
+              <p>${escapeHtml(config.author.bio)}</p>
+            </section>
+          </aside>
+        </div>
+      </main>`
+  });
 }
 
 const styles = `
 :root {
-  color-scheme: dark;
-  --bg: #14110f;
-  --bg-soft: #1b1714;
-  --panel: #171311;
-  --panel-soft: #201b17;
-  --text: #f4efe7;
-  --muted: #c9bba8;
-  --line: #3d342c;
-  --line-soft: #2c2520;
-  --accent: #d6a15d;
-  --accent-soft: #8b6841;
-  --display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --body: "Avenir Next", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: light;
+  --page: #f7f1e8;
+  --paper: #fffdf9;
+  --paper-2: #f1e8dc;
+  --ink: #221d18;
+  --muted: #6a5f54;
+  --line: #d9cdbd;
+  --accent: #7b4e2d;
+  --display: Charter, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --body: Charter, 'Iowan Old Style', Georgia, serif;
+  --sans: 'Avenir Next', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #181411;
+    --paper: #211b17;
+    --paper-2: #171310;
+    --ink: #f4eee6;
+    --muted: #b6a89a;
+    --line: #3b332d;
+    --accent: #d0a170;
+  }
 }
 
 * { box-sizing: border-box; }
-html { background: var(--bg); }
+html { background: var(--page); }
 body {
   margin: 0;
-  background:
-    linear-gradient(to bottom, rgba(214,161,93,0.04), transparent 220px),
-    radial-gradient(circle at top left, rgba(214,161,93,0.07), transparent 28%),
-    var(--bg);
-  color: var(--text);
+  background: var(--page);
+  color: var(--ink);
   font-family: var(--body);
-  line-height: 1.65;
+  line-height: 1.72;
 }
 
 a {
   color: inherit;
-  text-decoration-color: rgba(214,161,93,0.5);
-  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(123, 78, 45, 0.45);
+  text-underline-offset: 0.16em;
 }
 
-a:hover {
-  color: #f7d7ad;
-}
+a:hover { color: var(--accent); }
 
-p, li {
-  max-width: 72ch;
-}
+p, li { max-width: 68ch; }
 
 .page-shell {
-  width: min(1240px, calc(100% - 40px));
+  width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 20px 0 72px;
+  padding: 22px 0 64px;
 }
 
-.site-header {
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 32px;
-  padding-bottom: 18px;
-}
-
-.site-header-row {
+.site-header,
+.site-footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  gap: 10px 24px;
   justify-content: space-between;
-  gap: 12px 24px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
 }
 
-.brand {
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.site-footer {
+  border-bottom: 0;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 44px;
   color: var(--muted);
+}
+
+.site-header { margin-bottom: 30px; }
+.site-footer p,
+.site-header p { margin: 0; }
+
+.brand {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
 .tagline {
-  margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.masthead {
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 32px;
-  margin-bottom: 34px;
+  font-size: 0.96rem;
 }
 
 .issue-line,
-.kicker,
-.section-label,
+.section-kicker,
 .archive-date,
-.post-meta,
-.section-note,
-.rail-role,
 .back-link {
-  color: var(--muted);
-  font-size: 0.83rem;
-  letter-spacing: 0.08em;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: var(--muted);
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
+  margin: 0;
   font-family: var(--display);
   font-weight: 600;
-  line-height: 1.02;
   letter-spacing: -0.02em;
-  margin: 0;
+  line-height: 1.08;
+}
+
+.masthead {
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--line);
 }
 
 .masthead h1 {
-  font-size: clamp(4rem, 10vw, 8.2rem);
-  margin: 12px 0 14px;
+  font-size: clamp(3.8rem, 9vw, 7rem);
+  margin: 10px 0 14px;
 }
 
-.masthead-deck {
-  font-size: clamp(1.18rem, 2vw, 1.5rem);
-  color: #efe4d5;
+.masthead-deck,
+.article-deck,
+.lead-summary {
+  font-size: clamp(1.18rem, 2vw, 1.45rem);
   margin: 0;
-  max-width: 46rem;
 }
 
 .front-grid,
 .article-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.95fr);
-  gap: 38px;
+  grid-template-columns: minmax(0, 1.9fr) minmax(260px, 0.9fr);
+  gap: 36px;
 }
 
-.primary-column,
-.article-main {
-  min-width: 0;
-}
+.main-column,
+.article-body { min-width: 0; }
 
 .lead-story {
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 36px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 26px 28px;
+  margin-bottom: 30px;
 }
 
 .lead-story h2,
 .article-header h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  margin: 10px 0 16px;
+  font-size: clamp(2.2rem, 4.6vw, 4rem);
+  margin: 12px 0 14px;
 }
 
-.lead-summary,
-.article-deck {
-  font-size: 1.2rem;
-  color: #efe4d5;
-  margin: 0 0 18px;
+.lead-date {
+  margin: 16px 0 0;
+  color: var(--muted);
 }
 
-.post-meta {
+.lead-excerpt {
+  margin: 22px 0 0;
+  display: grid;
+  gap: 16px;
+}
+
+.lead-excerpt p {
+  margin: 0;
+  padding-left: 18px;
+  border-left: 2px solid var(--line);
+}
+
+.read-link {
+  margin: 20px 0 0;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.section-heading {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 18px;
-  margin: 0 0 22px;
+  justify-content: space-between;
+  gap: 10px 20px;
+  align-items: baseline;
+  margin-bottom: 16px;
 }
 
-.post-meta span:not(:last-child)::after {
-  content: "•";
-  margin-left: 18px;
-  color: var(--accent-soft);
+.section-heading.compact { margin-bottom: 12px; }
+
+.section-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
-.lead-points,
 .archive-list,
-.council-list,
-.thread-list,
-.numbered-list {
+.numbered-list,
+.notes-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.lead-points {
-  display: grid;
-  gap: 16px;
-  margin: 0 0 18px;
-}
-
-.lead-points li {
-  padding-left: 18px;
-  border-left: 2px solid var(--accent-soft);
-  color: #f0e7dc;
-}
-
-.lead-link {
-  margin: 0;
-  font-weight: 600;
-}
-
-.section-label-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 8px 18px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line-soft);
-  margin-bottom: 18px;
-}
-
-.section-note {
-  margin: 0;
-}
-
-.archive-list {
-  display: grid;
-  gap: 0;
-}
-
 .archive-item {
   display: grid;
-  grid-template-columns: 170px minmax(0, 1fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   gap: 18px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line-soft);
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
 }
 
-.archive-item h3 {
-  font-size: clamp(1.35rem, 2vw, 1.9rem);
-  margin-bottom: 8px;
-}
+.archive-item:first-child { border-top: 0; }
 
-.archive-item p {
-  margin: 0;
-}
-
-.rail,
-.article-rail {
-  display: grid;
-  gap: 20px;
-  align-content: start;
-}
-
-.rail-block {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid var(--line-soft);
-  padding: 18px 18px 20px;
-}
-
-.author-block h2 {
-  font-size: 2rem;
-  margin: 10px 0 12px;
-}
-
-.council-list {
-  display: grid;
-  gap: 18px;
-}
-
-.council-list h3 {
-  font-size: 1.18rem;
+.archive-copy h3 {
+  font-size: clamp(1.35rem, 2.1vw, 1.8rem);
   margin-bottom: 6px;
 }
 
-.council-list p {
+.archive-copy p,
+.sidebar-block p,
+.archive-date,
+.notes-list li,
+.numbered-list p,
+.article-deck,
+.back-link {
   margin: 0;
 }
 
-.article-page {
-  padding-bottom: 24px;
+.sidebar {
+  display: grid;
+  gap: 18px;
+  align-content: start;
 }
 
-.back-link {
-  margin: 0 0 18px;
+.sidebar-block {
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  padding: 18px 18px 20px;
+}
+
+.sidebar-block h2 {
+  font-size: 1.8rem;
+  margin: 10px 0 12px;
 }
 
 .article-header {
+  padding-bottom: 22px;
+  margin-bottom: 28px;
   border-bottom: 1px solid var(--line);
-  padding-bottom: 24px;
-  margin-bottom: 30px;
 }
 
-.story-section + .story-section {
-  margin-top: 34px;
-}
+.story-section + .story-section { margin-top: 32px; }
 
 .numbered-list {
   display: grid;
@@ -466,71 +410,33 @@ h3 {
 
 .numbered-list li {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--line-soft);
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
 }
 
 .list-number {
-  color: var(--accent);
-  font-family: var(--body);
-  font-size: 0.95rem;
+  font-family: var(--sans);
+  font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.14em;
+  color: var(--accent);
+  padding-top: 2px;
 }
 
-.numbered-list p,
-.thread-list li {
-  margin: 0;
-  font-size: 1.02rem;
-  color: #f0e7dc;
-}
-
-.thread-list {
+.notes-list {
   display: grid;
   gap: 14px;
 }
 
-.thread-list li {
+.notes-list li {
   padding-left: 18px;
   border-left: 2px solid var(--line);
 }
 
-.story-notes {
-  display: grid;
-  gap: 14px;
-  margin: 0;
-}
-
-.story-notes div {
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--line-soft);
-}
-
-.story-notes dt {
+.empty-state {
   color: var(--muted);
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 4px;
-}
-
-.story-notes dd {
-  margin: 0;
-  color: var(--text);
-}
-
-.site-footer {
-  border-top: 1px solid var(--line);
-  margin-top: 44px;
-  padding-top: 16px;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.site-footer p {
-  margin: 0;
 }
 
 @media (max-width: 980px) {
@@ -541,45 +447,15 @@ h3 {
   }
 
   .page-shell {
-    width: min(100% - 24px, 1240px);
-  }
-
-  .masthead h1,
-  .lead-story h2,
-  .article-header h1 {
-    line-height: 1.04;
+    width: min(100% - 22px, 1180px);
   }
 }
 
 @media (max-width: 640px) {
-  .page-shell {
-    padding-top: 14px;
-    padding-bottom: 56px;
-  }
-
-  .site-header {
-    margin-bottom: 22px;
-    padding-bottom: 14px;
-  }
-
-  .masthead {
-    padding-bottom: 24px;
-    margin-bottom: 28px;
-  }
-
-  .lead-story {
-    margin-bottom: 28px;
-    padding-bottom: 22px;
-  }
-
-  .rail-block {
-    padding: 16px;
-  }
-
-  .numbered-list li {
-    grid-template-columns: 38px 1fr;
-    gap: 12px;
-  }
+  .page-shell { padding-top: 16px; padding-bottom: 52px; }
+  .lead-story { padding: 20px; }
+  .sidebar-block { padding: 16px; }
+  .numbered-list li { grid-template-columns: 36px minmax(0, 1fr); }
 }
 `;
 
@@ -594,7 +470,7 @@ async function main() {
   for (const post of posts) {
     const postDir = path.join(docsDir, 'posts', post.slug);
     await fs.mkdir(postDir, { recursive: true });
-    await fs.writeFile(path.join(postDir, 'index.html'), postPage({ config, post }));
+    await fs.writeFile(path.join(postDir, 'index.html'), articlePage({ config, post }));
   }
 
   await fs.writeFile(path.join(docsDir, 'feed.json'), JSON.stringify(posts, null, 2) + '\n');

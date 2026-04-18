@@ -1,11 +1,13 @@
 {
-  "siteName": "Freight Signals",
-  "tagline": "Ideas about AI, stripped down until they make sense.",
+  "siteName": "Mara Vale",
+  "tagline": "Notes on AI, judgment, and the habit of paying attention.",
   "author": {
     "name": "Mara Vale",
-    "title": "Alter ego columnist",
-    "bio": "Mara Vale writes about AI the way Richard Feynman approached physics — from curiosity, not authority. Plain language over jargon. Mechanisms over marketing. 'I don't know' over false certainty. Her beat is whatever about AI is worth thinking clearly about this week."
+    "title": "Writer",
+    "bio": "Mara Vale writes short essays about AI, research claims, and the places where language gets ahead of evidence. The tone is personal, skeptical, and plainspoken on purpose."
   },
+  "homeIntro": "Short essays about AI, evidence, and the ordinary discipline of saying less than you can get away with.",
+  "sidebarNote": "This is meant to read like a real person's working notebook, not a content machine. The point is clarity, not volume.",
   "council": [
     {
       "name": "Rhea Coil",
