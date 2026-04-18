@@ -1,5 +1,48 @@
 [
   {
+    "id": "202604181831-we-build-great-ai-benchmarks-we-still-don-t-measure-what-actually-matters",
+    "slug": "202604181831-we-build-great-ai-benchmarks-we-still-don-t-measure-what-actually-matters",
+    "topic": "The trouble with AI benchmarks: what we measure versus what we wish we measured",
+    "title": "We build great AI benchmarks. We still don't measure what actually matters.",
+    "summary": "Every popular AI benchmark ends up measuring test-taking skill, not the general reliable capability everyone actually wants from these systems.",
+    "listicle": [
+      "Every benchmark becomes a skill you can cram for. This is not an AI flaw, this is how all tests work, always.",
+      "We don't actually want models that score 98% on MMLU. We want models that don't lie to you when you book a doctor.",
+      "No benchmark currently measures not making up facts when you are not looking. That is the thing everyone actually needs.",
+      "Right now we are very good at measuring how good models are at taking the tests we have made. That is all.",
+      "I don't know how to fix this. Nobody I have read that works on this has a complete good answer yet."
+    ],
+    "thread": [
+      "This is exactly the 'teaching to the test' problem everyone hated in high school. Nobody thought that produced good outcomes.",
+      "Scaling reliably makes benchmark scores go up. It does not reliably make the capability we want go up.",
+      "Almost every working researcher knows this gap exists. Very few will say it on the record.",
+      "The first good AI evaluation system will not look anything like a multiple choice test."
+    ],
+    "criticNotes": [
+      {
+        "critic": "Rhea Coil",
+        "role": "First Principles Reader",
+        "note": "You skip the core problem: we cannot even write a formal definition of 'the thing we care about'. This is not a measurement problem first."
+      },
+      {
+        "critic": "Jonah Slate",
+        "role": "Measurement Hawk",
+        "note": "You have not cited any data showing benchmark scores fully decouple from real world performance. There is real correlation here. Don't throw that out."
+      },
+      {
+        "critic": "Priya March",
+        "role": "Plain Language Coach",
+        "note": "'Nobody has a good answer' is too broad. People are testing live evaluation and adversarial probing. Be specific about what still fails."
+      }
+    ],
+    "meta": {
+      "provider": "ark",
+      "approxWords": 108,
+      "sequence": 22
+    },
+    "createdAt": "2026-04-18T18:31:17.648Z"
+  },
+  {
     "id": "202604181826-to-fix-llm-hallucinations-first-name-what-you-actually-believe",
     "slug": "202604181826-to-fix-llm-hallucinations-first-name-what-you-actually-believe",
     "topic": "What would you need to believe for LLM hallucinations to be solvable — and what evidence would actually change that",
