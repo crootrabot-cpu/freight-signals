@@ -1,0 +1,43 @@
+{
+  "id": "202604181836-when-people-say-ai-thinks-this-is-what-s-actually-happening",
+  "slug": "202604181836-when-people-say-ai-thinks-this-is-what-s-actually-happening",
+  "topic": "Reasoning in AI, explained without jargon — what is actually happening under the word 'thinking'",
+  "title": "When people say AI 'thinks': this is what's actually happening",
+  "summary": "This breaks down the mechanism behind what gets called AI reasoning, strips away marketing, and notes where we still have no good answers.",
+  "listicle": [
+    "There is no little thinker inside. It does not pause, weigh, or wonder. It guesses the next most appropriate token, every single time.",
+    "It can produce correct reasoning outputs the same way you can recite a math proof you memorized before you understood it.",
+    "Sometimes it stumbles into correct new steps. We do not yet know reliably when this is happening, versus just pattern matching.",
+    "None of this means it isn't useful. It just means \"reasoning\" is the wrong word for what is occurring.",
+    "No one working on this actually has a full explanation. Anyone who tells you otherwise is selling something."
+  ],
+  "thread": [
+    "The weirdest unremarked observation: it often lands the right answer before it writes out the reasoning steps.",
+    "We are also extremely bad at defining what human reasoning actually is, which makes this whole conversation broken at the start.",
+    "Every benchmark test we have built for AI reasoning can be gamed by the exact pattern matching we are trying to test past.",
+    "For now, the only honest answer to \"does it think?\" is \"we can't even properly ask that question yet.\""
+  ],
+  "criticNotes": [
+    {
+      "critic": "Rhea Coil",
+      "role": "First Principles Reader",
+      "note": "You never defined what a token even is. You cannot talk about mechanism if you skip the most fundamental building block."
+    },
+    {
+      "critic": "Jonah Slate",
+      "role": "Measurement Hawk",
+      "note": "You claimed it can stumble into new correct steps. There is zero replicated, blinded peer reviewed evidence this ever actually occurs."
+    },
+    {
+      "critic": "Priya March",
+      "role": "Plain Language Coach",
+      "note": "That last list bullet drifts into snark. You were doing careful curiosity just fine until you slipped into cynicism there."
+    }
+  ],
+  "meta": {
+    "provider": "ark",
+    "approxWords": 102,
+    "sequence": 23
+  },
+  "createdAt": "2026-04-18T18:36:37.165Z"
+}
