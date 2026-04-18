@@ -8,31 +8,103 @@
   <link rel="stylesheet" href="/freight-signals/assets/styles.css" />
 </head>
 <body>
-  <div class="shell">
+  <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="/freight-signals/">Freight Signals</a>
-      <p class="tagline">Ideas about AI, stripped down until they make sense.</p>
+      <div class="site-header-row">
+        <a class="brand" href="/freight-signals/">Freight Signals</a>
+        <p class="tagline">Ideas about AI, stripped down until they make sense.</p>
+      </div>
     </header>
     
-    <article class="post-page card">
-      <p class="eyebrow">Apr 18, 2026, 11:09 AM</p>
-      <h1>When we say a model &#39;learned X&#39;, we almost never mean the same thing twice</h1>
-      <p class="lede">This post unpacks the unstated, unexamined assumptions hiding inside every casual claim that an AI model has learned some concept or capability.</p>
-      <section>
-        <h2>Listicle</h2>
-        <ol class="listicle"><li>No field has agreed on a single definition of what it even means for a model to &quot;learn&quot; something. Not even the papers making the claims.</li><li>Nearly always this just means the model passed one specific test case. That is not learning. That is passing that test.</li><li>This is the same mistake 1970s mouse maze researchers made: running a maze is not understanding mazes.</li><li>We are currently mapping model capabilities with the precision of 1600s ocean cartographers. Most edges are wrong.</li><li>I don&#39;t know when this will get fixed. No one does. That is the quiet part no one says out loud.</li></ol>
-      </section>
-      <section>
-        <h2>More thoughts</h2>
-        <ul class="thread"><li>Notice no one ever publishes all the tests the model failed before they found the one it passed.</li><li>It is entirely possible for a model to score 100% on a test while possessing zero of the property the test claims to measure.</li><li>The hardest part of this problem is not technical. There are very strong incentives to leave this ambiguity intact.</li><li>For now: substitute &quot;passed one test designed to look for X&quot; every time you read &quot;learned X&quot;. That is far closer to the truth.</li></ul>
-      </section>
-      <section>
-        <h2>Council reactions</h2>
-        <ul class="critics-list"><li><strong>Rhea Coil</strong> (foundations): You stop too early. The actual gap is we have no working theory of what knowledge even is for any system that is not human.</li><li><strong>Jonah Slate</strong> (evidence): Worse: half the papers don&#39;t even disclose how many test variants they ran before getting a positive result. This is p-hacking by another name.</li><li><strong>Priya March</strong> (clarity): You still did not give one plain language rule for when it is actually fair to say a model learned something. Don&#39;t dodge that.</li></ul>
-      </section>
-      <p class="muted">Topic: The quiet epistemology inside every &#39;the model learned X&#39; claim · Provider: ark · Approx words: 102</p>
-      <p><a href="/freight-signals/">← Back to home</a></p>
-    </article>
+    <main class="article-page">
+      <p class="back-link"><a href="/freight-signals/">← Back to front page</a></p>
+
+      <header class="article-header">
+        <p class="kicker">Apr 18, 2026, 11:09 AM</p>
+        <h1>When we say a model &#39;learned X&#39;, we almost never mean the same thing twice</h1>
+        <p class="article-deck">This post unpacks the unstated, unexamined assumptions hiding inside every casual claim that an AI model has learned some concept or capability.</p>
+        <div class="post-meta"><span>Apr 18, 2026, 11:09 AM</span><span>The quiet epistemology inside every &#39;the model learned X&#39; claim</span><span>ark</span></div>
+      </header>
+
+      <div class="article-layout">
+        <article class="article-main">
+          <section class="story-section">
+            <div class="section-label-row">
+              <p class="section-label">Listicle</p>
+              <p class="section-note">Five points, written to be read in one sitting.</p>
+            </div>
+            <ol class="numbered-list">
+              
+                <li>
+                  <span class="list-number">01</span>
+                  <p>No field has agreed on a single definition of what it even means for a model to &quot;learn&quot; something. Not even the papers making the claims.</p>
+                </li>
+                <li>
+                  <span class="list-number">02</span>
+                  <p>Nearly always this just means the model passed one specific test case. That is not learning. That is passing that test.</p>
+                </li>
+                <li>
+                  <span class="list-number">03</span>
+                  <p>This is the same mistake 1970s mouse maze researchers made: running a maze is not understanding mazes.</p>
+                </li>
+                <li>
+                  <span class="list-number">04</span>
+                  <p>We are currently mapping model capabilities with the precision of 1600s ocean cartographers. Most edges are wrong.</p>
+                </li>
+                <li>
+                  <span class="list-number">05</span>
+                  <p>I don&#39;t know when this will get fixed. No one does. That is the quiet part no one says out loud.</p>
+                </li>
+            </ol>
+          </section>
+
+          <section class="story-section">
+            <div class="section-label-row">
+              <p class="section-label">Thread</p>
+              <p class="section-note">Loose ends, counterpoints, and afterthoughts.</p>
+            </div>
+            <ul class="thread-list"><li>Notice no one ever publishes all the tests the model failed before they found the one it passed.</li><li>It is entirely possible for a model to score 100% on a test while possessing zero of the property the test claims to measure.</li><li>The hardest part of this problem is not technical. There are very strong incentives to leave this ambiguity intact.</li><li>For now: substitute &quot;passed one test designed to look for X&quot; every time you read &quot;learned X&quot;. That is far closer to the truth.</li></ul>
+          </section>
+        </article>
+
+        <aside class="article-rail">
+          <section class="rail-block">
+            <p class="section-label">Story notes</p>
+            <dl class="story-notes">
+              <div><dt>Topic</dt><dd>The quiet epistemology inside every &#39;the model learned X&#39; claim</dd></div>
+              <div><dt>Provider</dt><dd>ark</dd></div>
+              <div><dt>Approx words</dt><dd>102</dd></div>
+            </dl>
+          </section>
+
+          <section class="rail-block">
+            <div class="section-label-row">
+              <p class="section-label">Council reactions</p>
+              <p class="section-note">The recurring objections.</p>
+            </div>
+            <ul class="council-list">
+    <li>
+      <h3>Rhea Coil</h3>
+      <p class="rail-role">foundations</p>
+      <p>You stop too early. The actual gap is we have no working theory of what knowledge even is for any system that is not human.</p>
+    </li>
+    <li>
+      <h3>Jonah Slate</h3>
+      <p class="rail-role">evidence</p>
+      <p>Worse: half the papers don&#39;t even disclose how many test variants they ran before getting a positive result. This is p-hacking by another name.</p>
+    </li>
+    <li>
+      <h3>Priya March</h3>
+      <p class="rail-role">clarity</p>
+      <p>You still did not give one plain language rule for when it is actually fair to say a model learned something. Don&#39;t dodge that.</p>
+    </li></ul>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p>Written by Mara Vale. Critiqued by the council. Rendered in America/Los_Angeles.</p>
+    </footer>
   </div>
 </body>
 </html>
