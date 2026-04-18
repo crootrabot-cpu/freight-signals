@@ -42,12 +42,31 @@ async function main() {
   const remote = process.env.BLOG_GIT_REMOTE || 'origin';
   const branch = process.env.BLOG_GIT_BRANCH || 'main';
 
-  try {
-    await run('git', ['push', remote, branch]);
-    console.log(`Pushed latest post to ${remote}/${branch}`);
-  } catch (error) {
-    console.log(`Push skipped or failed: ${(error.stderr || error.message).trim()}`);
+  async function pushWithRebaseRetry(attempt = 1) {
+    try {
+      await run('git', ['push', remote, branch]);
+      console.log(`Pushed latest post to ${remote}/${branch}`);
+    } catch (error) {
+      const msg = `${error.stderr || ''}${error.stdout || ''}${error.message || ''}`;
+      const nonFF = /non-fast-forward|rejected|fetch first/i.test(msg);
+      if (nonFF && attempt <= 2) {
+        console.log(`Push rejected (attempt ${attempt}); rebasing on ${remote}/${branch} and retrying`);
+        try {
+          await run('git', ['fetch', remote, branch]);
+          await run('git', ['rebase', `${remote}/${branch}`]);
+        } catch (rebaseErr) {
+          const rmsg = (rebaseErr.stderr || rebaseErr.message || '').toString().trim();
+          console.log(`Rebase failed: ${rmsg}`);
+          try { await run('git', ['rebase', '--abort']); } catch {}
+          return;
+        }
+        return pushWithRebaseRetry(attempt + 1);
+      }
+      console.log(`Push failed: ${msg.trim()}`);
+    }
   }
+
+  await pushWithRebaseRetry();
 }
 
 main().catch((error) => {
