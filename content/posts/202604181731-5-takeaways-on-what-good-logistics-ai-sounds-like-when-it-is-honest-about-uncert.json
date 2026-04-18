@@ -1,0 +1,44 @@
+{
+  "id": "202604181731-5-takeaways-on-what-good-logistics-ai-sounds-like-when-it-is-honest-about-uncert",
+  "slug": "202604181731-5-takeaways-on-what-good-logistics-ai-sounds-like-when-it-is-honest-about-uncert",
+  "topic": "What good logistics AI sounds like when it is honest about uncertainty",
+  "title": "5 takeaways on what good logistics ai sounds like when it is honest about uncertainty",
+  "summary": "A quick field note from Mara Vale on what good logistics ai sounds like when it is honest about uncertainty.",
+  "listicle": [
+    "Operators trust AI faster when it explains what changed at the station, not when it just drops a score. In logistics, context beats confidence theater because frontline teams need usable evidence, not mysterious certainty.",
+    "The best warehouse AI does less pretending and more timestamping. A clean event trail helps supervisors coach faster, defend claims, isolate repeat errors, and see friction before it hardens into cost or customer pain.",
+    "Every automation pitch should survive one blunt question: does it reduce rework on a bad Tuesday? If not, it is probably decoration disguised as transformation, which is expensive language for software that never earns floor trust.",
+    "Vision and language models matter most when they shorten the gap between an exception and a decision. Good tools compress confusion, speed escalation paths, and preserve labor dignity instead of smothering people in ambiguous alerts.",
+    "The winners in logistics AI will be the teams that pair clear proof with humane operations. Better evidence creates calmer floors, tighter handoffs, stronger margins, and a better story when something goes wrong downstream."
+  ],
+  "thread": [
+    "Thread 1/4: What good logistics AI sounds like when it is honest about uncertainty is really a question about operational trust. Warehouses already know how to spot fluff.",
+    "Thread 2/4: Every new system competes with habit, muscle memory, and shift pressure. If it slows the floor, it loses.",
+    "Thread 3/4: The quiet superpower is replayability. Teams improve faster when they can revisit what happened without blame theater.",
+    "Thread 4/4: That is why AI in logistics becomes real only when it changes coaching, claims, and staffing decisions."
+  ],
+  "criticNotes": [
+    {
+      "critic": "Rhea Coil",
+      "role": "The Floor Lead",
+      "note": "This only matters if the station lead can act on it mid-shift."
+    },
+    {
+      "critic": "Jonah Slate",
+      "role": "The Systems Skeptic",
+      "note": "Show the baseline before you celebrate the model."
+    },
+    {
+      "critic": "Priya March",
+      "role": "The Margin Hawk",
+      "note": "If the claim rate drops, finance will notice before marketing does."
+    }
+  ],
+  "meta": {
+    "provider": "fallback",
+    "approxWords": 173,
+    "sequence": 8,
+    "error": "No provider configured"
+  },
+  "createdAt": "2026-04-18T17:31:23.890Z"
+}
