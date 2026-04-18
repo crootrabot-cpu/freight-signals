@@ -1,5 +1,48 @@
 [
   {
+    "id": "202604181841-how-to-tell-real-ai-breakthroughs-from-branded-announcements",
+    "slug": "202604181841-how-to-tell-real-ai-breakthroughs-from-branded-announcements",
+    "topic": "How to tell a real AI breakthrough from a branded one using only first principles",
+    "title": "How to tell real AI breakthroughs from branded announcements",
+    "summary": "This lays out first-principle checks anyone can use to separate actual progress from marketing wrapped as AI research.",
+    "listicle": [
+      "Ask what it cannot do. Real breakthroughs come with clear failure modes, not just polished demo wins.",
+      "Verify someone outside the announcing team can reproduce the same result.",
+      "Ignore curated test scores. Watch how it breaks when you do boring, ordinary things.",
+      "Real progress moves the baseline for everyone, not just one company's demo stage.",
+      "If nobody is naming the tradeoff that was made, there is no breakthrough."
+    ],
+    "thread": [
+      "Nobody has ever hidden a genuine breakthrough. People can't wait to show how it works.",
+      "Most branded 'breakthroughs' are just test set hacking, not actual model improvement.",
+      "I don't know a single case where a press release beat arXiv for important progress.",
+      "The quietest signal is the best: other researchers start building on it before press hits."
+    ],
+    "criticNotes": [
+      {
+        "critic": "Rhea Coil",
+        "role": "Foundations",
+        "note": "You skipped the hardest first principle check: does this change what we thought was impossible? Most 'breakthroughs' just do something we already knew could be done, faster."
+      },
+      {
+        "critic": "Jonah Slate",
+        "role": "Evidence",
+        "note": "All these checks are fine, but you didn't name the timeline. 90% of claims fall apart completely 6 weeks after announcement, every single time."
+      },
+      {
+        "critic": "Eli Rowan",
+        "role": "Mechanism",
+        "note": "You missed the biggest red flag. If they won't explain *how* it works, it is not a breakthrough. It is a magic trick."
+      }
+    ],
+    "meta": {
+      "provider": "ark",
+      "approxWords": 68,
+      "sequence": 24
+    },
+    "createdAt": "2026-04-18T18:41:51.338Z"
+  },
+  {
     "id": "202604181836-when-people-say-ai-thinks-this-is-what-s-actually-happening",
     "slug": "202604181836-when-people-say-ai-thinks-this-is-what-s-actually-happening",
     "topic": "Reasoning in AI, explained without jargon — what is actually happening under the word 'thinking'",
