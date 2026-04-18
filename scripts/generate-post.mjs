@@ -5,11 +5,11 @@ import { generateWithProvider } from './lib/llm.mjs';
 
 function fallbackPost({ topic, config, createdAt, postNumber }) {
   const items = [
-    `Operators trust AI faster when it explains what changed at the station, not when it just drops a score. In logistics, context beats confidence theater every time.`,
-    `The best warehouse AI does less pretending and more timestamping. A clean event trail helps supervisors coach faster, defend claims, and see friction before it becomes cost.`,
-    `Every automation pitch should survive one blunt question: does it reduce rework on a bad Tuesday? If not, it is probably decoration disguised as transformation.`,
-    `Vision and language models matter most when they shorten the gap between an exception and a decision. Good tools compress confusion, not labor dignity.`,
-    `The winners in logistics AI will be the teams that pair clear proof with humane operations. Better evidence creates calmer floors, tighter handoffs, and stronger margins.`
+    `Operators trust AI faster when it explains what changed at the station, not when it just drops a score. In logistics, context beats confidence theater because frontline teams need usable evidence, not mysterious certainty.`,
+    `The best warehouse AI does less pretending and more timestamping. A clean event trail helps supervisors coach faster, defend claims, isolate repeat errors, and see friction before it hardens into cost or customer pain.`,
+    `Every automation pitch should survive one blunt question: does it reduce rework on a bad Tuesday? If not, it is probably decoration disguised as transformation, which is expensive language for software that never earns floor trust.`,
+    `Vision and language models matter most when they shorten the gap between an exception and a decision. Good tools compress confusion, speed escalation paths, and preserve labor dignity instead of smothering people in ambiguous alerts.`,
+    `The winners in logistics AI will be the teams that pair clear proof with humane operations. Better evidence creates calmer floors, tighter handoffs, stronger margins, and a better story when something goes wrong downstream.`
   ];
 
   const thread = [
@@ -20,7 +20,7 @@ function fallbackPost({ topic, config, createdAt, postNumber }) {
   ];
 
   return {
-    title: `5 signals that ${topic.toLowerCase().replace(/^what /, 'what ')}`,
+    title: `5 takeaways on ${topic.toLowerCase()}`,
     summary: `A quick field note from ${config.author.name} on ${topic.toLowerCase()}.`,
     listicle: items,
     thread,
