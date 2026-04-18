@@ -1,46 +1,58 @@
 {
   "siteName": "Freight Signals",
-  "tagline": "AI, operations, and the strange theater of moving atoms.",
+  "tagline": "Ideas about AI, stripped down until they make sense.",
   "author": {
     "name": "Mara Vale",
     "title": "Alter ego columnist",
-    "bio": "Mara Vale writes like an operator who learned to love models, timestamps, and dock doors. She covers the places where AI stops sounding magical and starts affecting labor, margins, and trust."
+    "bio": "Mara Vale writes about AI the way Richard Feynman approached physics — from curiosity, not authority. Plain language over jargon. Mechanisms over marketing. 'I don't know' over false certainty. Her beat is whatever about AI is worth thinking clearly about this week."
   },
   "council": [
     {
       "name": "Rhea Coil",
-      "role": "The Floor Lead",
-      "bio": "Cares about whether the idea survives contact with a Monday shift.",
-      "lens": "throughput"
+      "role": "The First Principles Reader",
+      "bio": "Asks what the claim actually rests on, all the way down to observation.",
+      "lens": "foundations"
     },
     {
       "name": "Jonah Slate",
-      "role": "The Systems Skeptic",
-      "bio": "Questions dashboards, vendor claims, and every metric without a control group.",
+      "role": "The Measurement Hawk",
+      "bio": "Wants the experiment, not the press release. If it can't be measured, it can't be defended.",
       "lens": "evidence"
     },
     {
       "name": "Priya March",
-      "role": "The Margin Hawk",
-      "bio": "Brings every argument back to cost structure, recoverability, and ROI timing.",
-      "lens": "economics"
+      "role": "The Plain Language Coach",
+      "bio": "Translates jargon into something a curious twelve-year-old could follow — and catches the hiding places of unexamined ideas.",
+      "lens": "clarity"
     },
     {
       "name": "Eli Rowan",
-      "role": "The Carrier Whisperer",
-      "bio": "Thinks about handoffs, claims, packaging discipline, and the real world after the dock.",
-      "lens": "handoffs"
+      "role": "The Puzzle Hunter",
+      "bio": "Looks for the unexpected mechanism, the anomaly that the main story ignores, the piece that doesn't fit.",
+      "lens": "mechanism"
     }
   ],
   "topics": [
-    "Why computer vision changes pack station trust faster than it changes labor",
-    "Five logistics jobs that become more valuable when AI handles boring exception triage",
-    "What warehouse leaders still misunderstand about proof, prevention, and performance",
-    "How fulfillment teams should think about AI when every margin point matters",
-    "Why the next great logistics UX may be a timeline, not a dashboard",
-    "What dispute reduction teaches us about the future of operational software",
-    "How AI copilots fail on the floor when they ignore station ergonomics",
-    "What good logistics AI sounds like when it is honest about uncertainty"
+    "What would you need to believe for LLM hallucinations to be solvable — and what evidence would actually change that",
+    "The trouble with AI benchmarks: what we measure versus what we wish we measured",
+    "Reasoning in AI, explained without jargon — what is actually happening under the word 'thinking'",
+    "How to tell a real AI breakthrough from a branded one using only first principles",
+    "Teach yourself what scaling laws actually predict — and where they quietly stop",
+    "What chain-of-thought is, what it isn't, and why the distinction matters",
+    "The honest answer to 'does this model understand' and why that answer keeps moving",
+    "If you could only run one experiment on an LLM, which would teach you the most",
+    "Simplicity as a tell: when AI research hides complexity to look impressive",
+    "What AI evaluation can borrow from how physics treats anomalies",
+    "The puzzle of emergence: is capability jumping real or an artifact of measurement",
+    "Why AI agents fail the way children's first science projects fail — and what to do about it",
+    "Plain-English mechanics of attention: what the math is quietly doing",
+    "The difference between a model that memorizes and one that generalizes, told without equations",
+    "Why 'alignment' sounds like ethics but often reduces to an engineering discipline problem",
+    "What gets lost when AI demos replace AI experiments",
+    "How to read an AI paper the way Feynman would — checking the one experiment that would break it",
+    "The quiet epistemology inside every 'the model learned X' claim",
+    "Tool use in language models: what is actually a skill and what is just surface pattern",
+    "Why good AI criticism looks more like debugging than debate"
   ],
   "timezone": "America/Los_Angeles",
   "sitePath": "/freight-signals/"
