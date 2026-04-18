@@ -1,0 +1,27 @@
+{
+  "id": "202604181903-what-ai-benchmarks-measure-and-what-we-actually-want-them-to",
+  "slug": "202604181903-what-ai-benchmarks-measure-and-what-we-actually-want-them-to",
+  "topic": "The trouble with AI benchmarks: what we measure versus what we wish we measured",
+  "title": "What AI benchmarks measure, and what we actually want them to",
+  "summary": "This walks through the quiet gap between what benchmark scores prove about AI, and what everyone actually cares about knowing.",
+  "listicle": [
+    "Every benchmark gets optimized for, eventually. Not by making the model smarter, just by making it very good at that exact test.",
+    "No one hires an AI assistant because it wins at MMLU. They hire it to not mess up their kid's field trip permission slip.",
+    "We never test for grace, or knowing when to shut up, or admitting it cannot read a messy handwritten scan.",
+    "I watched three separate teams game the same reasoning benchmark last quarter. None improved real world performance.",
+    "Worse: good benchmark scores let researchers avoid asking if the thing they built is even useful at all."
+  ],
+  "thread": [
+    "It is almost never noted how much benchmark design says far more about the academics writing them than the models.",
+    "Nobody has ever run a benchmark for how often an AI will quietly make you feel a little stupider after using it.",
+    "This gap will not be fixed by adding more test questions. It will be fixed by stopping treating evaluation like an exam.",
+    "The best model I have ever used has never appeared on any public leaderboard, for what that's worth."
+  ],
+  "criticNotes": [],
+  "meta": {
+    "provider": "ark",
+    "approxWords": 101,
+    "sequence": 165
+  },
+  "createdAt": "2026-04-18T19:03:49.819Z"
+}
