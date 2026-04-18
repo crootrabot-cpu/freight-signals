@@ -1,8 +1,8 @@
 {
   "id": "20250704-i-keep-coming-back-to-operator-tooling",
   "slug": "20250704-i-keep-coming-back-to-operator-tooling",
-  "title": "I keep coming back to operator tooling",
-  "summary": "A reflection on operator tooling and the kind of world it quietly assumes.",
+  "title": "Good operator tooling leaves less room for guessing",
+  "summary": "An essay about operator tools, trust, and the cost of forcing people to infer too much.",
   "topic": "operator tooling while everyone tried to make software feel responsible",
   "body": [
     "My notes on operator tooling began with a small irritation in July 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was the difference between an assistant and a dependency. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
-      "title": "The problem with evaluation is usually what happens when a product grows more competent than legible",
+      "title": "Most evaluation problems are really trust problems",
       "note": "Written in June 2025."
     },
     {

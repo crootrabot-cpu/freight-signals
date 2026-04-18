@@ -1,8 +1,8 @@
 {
   "id": "20250507-a-note-on-ambient-assistants-as-the-tools-got-more-useful-and-less-theatrical",
   "slug": "20250507-a-note-on-ambient-assistants-as-the-tools-got-more-useful-and-less-theatrical",
-  "title": "A note on ambient assistants as the tools got more useful and less theatrical",
-  "summary": "A personal essay about ambient assistants, and the longer argument hidden inside how trust is built from boring details.",
+  "title": "Ambient assistants work best when you can still see the seams",
+  "summary": "This one is about ambient assistants, but really about legibility, maintenance, and whether convenience has an off switch.",
   "topic": "ambient assistants as the tools got more useful and less theatrical",
   "body": [
     "My notes on ambient assistants began with a small irritation in May 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was how trust is built from boring details. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250407-on-interface-trust-after-the-magic-show",
-      "title": "On interface trust after the magic show",
+      "title": "Interface trust is built out of small legible things",
       "note": "Written in April 2025."
     },
     {

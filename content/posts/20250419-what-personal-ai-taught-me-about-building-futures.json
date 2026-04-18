@@ -1,8 +1,8 @@
 {
   "id": "20250419-what-personal-ai-taught-me-about-building-futures",
   "slug": "20250419-what-personal-ai-taught-me-about-building-futures",
-  "title": "What personal AI taught me about building futures",
-  "summary": "A reflection on personal AI and the kind of world it quietly assumes.",
+  "title": "Personal AI only works if it stays personal",
+  "summary": "A personal essay about why personal AI only works when it resists flattening the person it claims to help.",
   "topic": "personal AI once maintenance became the real product",
   "body": [
     "I wrote this down in April 2025 after thinking about personal AI from the vantage point of a train ride where the future looked mostly like error handling. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Personal AI seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250407-on-interface-trust-after-the-magic-show",
-      "title": "On interface trust after the magic show",
+      "title": "Interface trust is built out of small legible things",
       "note": "Written in April 2025."
     },
     {

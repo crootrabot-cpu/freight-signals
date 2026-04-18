@@ -1,8 +1,8 @@
 {
   "id": "20250715-on-reasoning-models-after-the-magic-show",
   "slug": "20250715-on-reasoning-models-after-the-magic-show",
-  "title": "On reasoning models after the magic show",
-  "summary": "An essay on reasoning models, with one eye on the machinery and one eye on the people asked to live with it.",
+  "title": "What reasoning models reveal once the demo energy fades",
+  "summary": "A post about reasoning models after the hype spike, with attention to the parts that become visible only after repetition.",
   "topic": "reasoning models after the magic show",
   "body": [
     "I wrote this down in July 2025 after thinking about reasoning models from the vantage point of a desktop crowded with small useful automations. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Reasoning models seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
-      "title": "The problem with evaluation is usually what happens when a product grows more competent than legible",
+      "title": "Most evaluation problems are really trust problems",
       "note": "Written in June 2025."
     },
     {

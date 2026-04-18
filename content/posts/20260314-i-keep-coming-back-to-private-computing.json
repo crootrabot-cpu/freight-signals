@@ -1,8 +1,8 @@
 {
   "id": "20260314-i-keep-coming-back-to-private-computing",
   "slug": "20260314-i-keep-coming-back-to-private-computing",
-  "title": "I keep coming back to private computing",
-  "summary": "An essay on private computing, with one eye on the machinery and one eye on the people asked to live with it.",
+  "title": "Private computing feels more necessary than ambitious now",
+  "summary": "A note on private computing and why it now feels like a baseline instinct rather than a niche preference.",
   "topic": "private computing now that the noise floor is higher",
   "body": [
     "I wrote this down in March 2026 after thinking about private computing from the vantage point of an afternoon spent editing instead of generating. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Private computing seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20260205-on-online-identity-when-the-novelty-tax-has-mostly-been-paid",
-      "title": "On online identity when the novelty tax has mostly been paid",
+      "title": "Online identity after the novelty wears off",
       "note": "Written in February 2026."
     },
     {

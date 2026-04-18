@@ -1,8 +1,8 @@
 {
   "id": "20250930-a-note-on-evaluation-as-the-tools-got-more-useful-and-less-theatrical",
   "slug": "20250930-a-note-on-evaluation-as-the-tools-got-more-useful-and-less-theatrical",
-  "title": "A note on evaluation as the tools got more useful and less theatrical",
-  "summary": "An essay on evaluation, with one eye on the machinery and one eye on the people asked to live with it.",
+  "title": "Evaluation is supposed to slow us down a little",
+  "summary": "A note on evaluation, restraint, and why good tests are supposed to interrupt momentum.",
   "topic": "evaluation as the tools got more useful and less theatrical",
   "body": [
     "My notes on evaluation began with a small irritation in September 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was how trust is built from boring details. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250802-the-problem-with-interface-trust-is-usually-the-strange-politics-of-delegating-j",
-      "title": "The problem with interface trust is usually the strange politics of delegating judgment",
+      "title": "A trustworthy interface should lower your heart rate",
       "note": "Written in August 2025."
     },
     {

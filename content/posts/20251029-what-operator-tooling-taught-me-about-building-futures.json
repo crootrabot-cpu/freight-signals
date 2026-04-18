@@ -1,8 +1,8 @@
 {
   "id": "20251029-what-operator-tooling-taught-me-about-building-futures",
   "slug": "20251029-what-operator-tooling-taught-me-about-building-futures",
-  "title": "What operator tooling taught me about building futures",
-  "summary": "A reflection on operator tooling and the kind of world it quietly assumes.",
+  "title": "Operator tooling matters most when the day is already going sideways",
+  "summary": "A post about operator tooling on bad days, when clarity matters more than ambition.",
   "topic": "operator tooling once maintenance became the real product",
   "body": [
     "My notes on operator tooling began with a small irritation in October 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was what happens when a product grows more competent than legible. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250930-a-note-on-evaluation-as-the-tools-got-more-useful-and-less-theatrical",
-      "title": "A note on evaluation as the tools got more useful and less theatrical",
+      "title": "Evaluation is supposed to slow us down a little",
       "note": "Written in September 2025."
     },
     {

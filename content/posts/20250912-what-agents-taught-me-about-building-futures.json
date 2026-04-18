@@ -1,8 +1,8 @@
 {
   "id": "20250912-what-agents-taught-me-about-building-futures",
   "slug": "20250912-what-agents-taught-me-about-building-futures",
-  "title": "What agents taught me about building futures",
-  "summary": "A post about agents once maintenance became the real product, written against the temptation to make the future sound cleaner than it is.",
+  "title": "I trust agents more when they look a little unfinished",
+  "summary": "A personal note on agents, reliability, and why unfinished-looking systems can be easier to trust.",
   "topic": "agents once maintenance became the real product",
   "body": [
     "I wrote this down in September 2025 after thinking about agents from the vantage point of a train ride where the future looked mostly like error handling. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Agents seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250802-the-problem-with-interface-trust-is-usually-the-strange-politics-of-delegating-j",
-      "title": "The problem with interface trust is usually the strange politics of delegating judgment",
+      "title": "A trustworthy interface should lower your heart rate",
       "note": "Written in August 2025."
     },
     {

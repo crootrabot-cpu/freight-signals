@@ -1,8 +1,8 @@
 {
   "id": "20251109-the-problem-with-reasoning-models-is-usually-the-strange-politics-of-delegating-",
   "slug": "20251109-the-problem-with-reasoning-models-is-usually-the-strange-politics-of-delegating-",
-  "title": "The problem with reasoning models is usually the strange politics of delegating judgment",
-  "summary": "An essay on reasoning models, with one eye on the machinery and one eye on the people asked to live with it.",
+  "title": "I read reasoning models through their failure cases now",
+  "summary": "This one looks at reasoning models through failure, not just fluency.",
   "topic": "reasoning models when reliability turned out to be the whole game",
   "body": [
     "I wrote this down in November 2025 after thinking about reasoning models from the vantage point of an office where the exciting part was no longer the model but the glue. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Reasoning models seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250930-a-note-on-evaluation-as-the-tools-got-more-useful-and-less-theatrical",
-      "title": "A note on evaluation as the tools got more useful and less theatrical",
+      "title": "Evaluation is supposed to slow us down a little",
       "note": "Written in September 2025."
     },
     {

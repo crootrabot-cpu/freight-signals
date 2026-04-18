@@ -1,8 +1,8 @@
 {
   "id": "20250309-the-problem-with-operator-tooling-is-usually-the-strange-politics-of-delegating-",
   "slug": "20250309-the-problem-with-operator-tooling-is-usually-the-strange-politics-of-delegating-",
-  "title": "The problem with operator tooling is usually the strange politics of delegating judgment",
-  "summary": "A reflection on operator tooling and the kind of world it quietly assumes.",
+  "title": "Operator tools should be easier to trust than they are",
+  "summary": "A note on operator tooling and the gap between a usable system and a merely powerful one.",
   "topic": "operator tooling when reliability turned out to be the whole game",
   "body": [
     "My notes on operator tooling began with a small irritation in March 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was the strange politics of delegating judgment. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250208-what-evaluation-taught-me-about-building-futures",
-      "title": "What evaluation taught me about building futures",
+      "title": "Evaluation gets harder right when it starts to matter",
       "note": "Written in February 2025."
     },
     {

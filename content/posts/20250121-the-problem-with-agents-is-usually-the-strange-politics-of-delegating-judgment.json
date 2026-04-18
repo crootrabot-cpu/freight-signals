@@ -1,8 +1,8 @@
 {
   "id": "20250121-the-problem-with-agents-is-usually-the-strange-politics-of-delegating-judgment",
   "slug": "20250121-the-problem-with-agents-is-usually-the-strange-politics-of-delegating-judgment",
-  "title": "The problem with agents is usually the strange politics of delegating judgment",
-  "summary": "A post about agents when reliability turned out to be the whole game, written against the temptation to make the future sound cleaner than it is.",
+  "title": "What gets delegated when you let agents act for you",
+  "summary": "A piece about agents, delegation, and the uncomfortable politics hiding inside automation that acts on your behalf.",
   "topic": "agents when reliability turned out to be the whole game",
   "body": [
     "I wrote this down in January 2025 after thinking about agents from the vantage point of an office where the exciting part was no longer the model but the glue. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Agents seemed to me like a good way to keep the older question in view.",

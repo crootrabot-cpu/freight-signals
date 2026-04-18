@@ -1,8 +1,8 @@
 {
   "id": "20250219-on-evidence-chains-after-the-magic-show",
   "slug": "20250219-on-evidence-chains-after-the-magic-show",
-  "title": "On evidence chains after the magic show",
-  "summary": "A personal essay about evidence chains, and the longer argument hidden inside the long argument between autonomy and auditability.",
+  "title": "What an evidence chain is supposed to buy you",
+  "summary": "A piece about evidence chains and what they are meant to preserve once decisions start moving faster.",
   "topic": "evidence chains after the magic show",
   "body": [
     "I wrote this down in February 2025 after thinking about evidence chains from the vantage point of a desktop crowded with small useful automations. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Evidence chains seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250208-what-evaluation-taught-me-about-building-futures",
-      "title": "What evaluation taught me about building futures",
+      "title": "Evaluation gets harder right when it starts to matter",
       "note": "Written in February 2025."
     },
     {

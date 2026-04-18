@@ -1,8 +1,8 @@
 {
   "id": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
   "slug": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
-  "title": "The problem with evaluation is usually what happens when a product grows more competent than legible",
-  "summary": "An essay on evaluation, with one eye on the machinery and one eye on the people asked to live with it.",
+  "title": "Most evaluation problems are really trust problems",
+  "summary": "An essay on evaluation as a trust problem, not just a metrics problem.",
   "topic": "evaluation once maintenance became the real product",
   "body": [
     "My notes on evaluation began with a small irritation in June 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was what happens when a product grows more competent than legible. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250407-on-interface-trust-after-the-magic-show",
-      "title": "On interface trust after the magic show",
+      "title": "Interface trust is built out of small legible things",
       "note": "Written in April 2025."
     },
     {

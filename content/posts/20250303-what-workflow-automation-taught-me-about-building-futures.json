@@ -1,8 +1,8 @@
 {
   "id": "20250303-what-workflow-automation-taught-me-about-building-futures",
   "slug": "20250303-what-workflow-automation-taught-me-about-building-futures",
-  "title": "What workflow automation taught me about building futures",
-  "summary": "A post about workflow automation once maintenance became the real product, written against the temptation to make the future sound cleaner than it is.",
+  "title": "Workflow automation changes the shape of responsibility",
+  "summary": "A post about workflow automation and the way it quietly rearranges responsibility.",
   "topic": "workflow automation once maintenance became the real product",
   "body": [
     "There was a version of workflow automation circulating in March 2025 that sounded inevitable. I have become suspicious of inevitability as a tone. It is usually a story people tell after they have quietly selected the conditions under which a trend looks obvious. Standing inside a train ride where the future looked mostly like error handling, what I noticed instead was contingency: how much of the future depends on atmosphere, labor, trust, and timing, and how often those human variables are treated as background noise once a technical idea starts sounding important.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250208-what-evaluation-taught-me-about-building-futures",
-      "title": "What evaluation taught me about building futures",
+      "title": "Evaluation gets harder right when it starts to matter",
       "note": "Written in February 2025."
     },
     {

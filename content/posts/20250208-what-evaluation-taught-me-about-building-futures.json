@@ -1,8 +1,8 @@
 {
   "id": "20250208-what-evaluation-taught-me-about-building-futures",
   "slug": "20250208-what-evaluation-taught-me-about-building-futures",
-  "title": "What evaluation taught me about building futures",
-  "summary": "An essay on evaluation, with one eye on the machinery and one eye on the people asked to live with it.",
+  "title": "Evaluation gets harder right when it starts to matter",
+  "summary": "A post about evaluation and the uneasy fact that measurement gets harder exactly when people start depending on it.",
   "topic": "evaluation while everyone tried to make software feel responsible",
   "body": [
     "My notes on evaluation began with a small irritation in February 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was the difference between an assistant and a dependency. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",

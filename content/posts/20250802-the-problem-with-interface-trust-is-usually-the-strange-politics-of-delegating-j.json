@@ -1,8 +1,8 @@
 {
   "id": "20250802-the-problem-with-interface-trust-is-usually-the-strange-politics-of-delegating-j",
   "slug": "20250802-the-problem-with-interface-trust-is-usually-the-strange-politics-of-delegating-j",
-  "title": "The problem with interface trust is usually the strange politics of delegating judgment",
-  "summary": "A post about interface trust when reliability turned out to be the whole game, written against the temptation to make the future sound cleaner than it is.",
+  "title": "A trustworthy interface should lower your heart rate",
+  "summary": "An essay on what trustworthy interfaces do to the body: ideally, they calm it down.",
   "topic": "interface trust when reliability turned out to be the whole game",
   "body": [
     "My notes on interface trust began with a small irritation in August 2025. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was the strange politics of delegating judgment. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
-      "title": "The problem with evaluation is usually what happens when a product grows more competent than legible",
+      "title": "Most evaluation problems are really trust problems",
       "note": "Written in June 2025."
     },
     {

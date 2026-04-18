@@ -1,8 +1,8 @@
 {
   "id": "20250923-the-problem-with-local-inference-is-usually-the-strange-politics-of-delegating-j",
   "slug": "20250923-the-problem-with-local-inference-is-usually-the-strange-politics-of-delegating-j",
-  "title": "The problem with local inference is usually the strange politics of delegating judgment",
-  "summary": "A reflection on local inference and the kind of world it quietly assumes.",
+  "title": "The appeal of local inference is not just privacy",
+  "summary": "This one follows local inference past privacy talking points and into questions of control, trust, and texture.",
   "topic": "local inference when reliability turned out to be the whole game",
   "body": [
     "There was a version of local inference circulating in September 2025 that sounded inevitable. I have become suspicious of inevitability as a tone. It is usually a story people tell after they have quietly selected the conditions under which a trend looks obvious. Standing inside an office where the exciting part was no longer the model but the glue, what I noticed instead was contingency: how much of the future depends on atmosphere, labor, trust, and timing, and how often those human variables are treated as background noise once a technical idea starts sounding important.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250802-the-problem-with-interface-trust-is-usually-the-strange-politics-of-delegating-j",
-      "title": "The problem with interface trust is usually the strange politics of delegating judgment",
+      "title": "A trustworthy interface should lower your heart rate",
       "note": "Written in August 2025."
     },
     {

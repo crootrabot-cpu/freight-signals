@@ -1,8 +1,8 @@
 {
   "id": "20250616-the-problem-with-evidence-chains-is-usually-the-strange-politics-of-delegating-j",
   "slug": "20250616-the-problem-with-evidence-chains-is-usually-the-strange-politics-of-delegating-j",
-  "title": "The problem with evidence chains is usually the strange politics of delegating judgment",
-  "summary": "A personal essay about evidence chains, and the longer argument hidden inside the strange politics of delegating judgment.",
+  "title": "Evidence chains are only useful if they stay readable",
+  "summary": "An essay on evidence chains, readability, and why proof loses value when nobody can follow it.",
   "topic": "evidence chains when reliability turned out to be the whole game",
   "body": [
     "I wrote this down in June 2025 after thinking about evidence chains from the vantage point of an office where the exciting part was no longer the model but the glue. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Evidence chains seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
-      "title": "The problem with evaluation is usually what happens when a product grows more competent than legible",
+      "title": "Most evaluation problems are really trust problems",
       "note": "Written in June 2025."
     },
     {

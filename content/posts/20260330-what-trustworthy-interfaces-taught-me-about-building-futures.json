@@ -1,8 +1,8 @@
 {
   "id": "20260330-what-trustworthy-interfaces-taught-me-about-building-futures",
   "slug": "20260330-what-trustworthy-interfaces-taught-me-about-building-futures",
-  "title": "What trustworthy interfaces taught me about building futures",
-  "summary": "A post about trustworthy interfaces after years of moving too quickly, written against the temptation to make the future sound cleaner than it is.",
+  "title": "A trustworthy interface should make the right thing easier to see",
+  "summary": "An essay on trustworthy interfaces and the calm that comes from seeing the right thing at the right moment.",
   "topic": "trustworthy interfaces after years of moving too quickly",
   "body": [
     "My notes on trustworthy interfaces began with a small irritation in March 2026. Everyone around me seemed to agree that the big story was obvious, and the agreement itself made me uneasy. When consensus arrives too quickly, I start looking for whatever got edited out to make the sentence so clean. In this case the omitted piece was the social cost of never pausing to notice what changed. That phrase may sound abstract, but on the ground it shows up as ordinary details: who has to maintain the thing, who absorbs its errors, who gets asked to trust it first, and who benefits from calling that trust progress.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20260205-on-online-identity-when-the-novelty-tax-has-mostly-been-paid",
-      "title": "On online identity when the novelty tax has mostly been paid",
+      "title": "Online identity after the novelty wears off",
       "note": "Written in February 2026."
     },
     {

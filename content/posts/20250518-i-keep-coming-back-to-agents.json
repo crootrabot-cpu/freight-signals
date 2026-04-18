@@ -1,8 +1,8 @@
 {
   "id": "20250518-i-keep-coming-back-to-agents",
   "slug": "20250518-i-keep-coming-back-to-agents",
-  "title": "I keep coming back to agents",
-  "summary": "A post about agents while everyone tried to make software feel responsible, written against the temptation to make the future sound cleaner than it is.",
+  "title": "Agents make responsibility harder to point to",
+  "summary": "This essay treats agents less as magic workers and more as systems that blur accountability.",
   "topic": "agents while everyone tried to make software feel responsible",
   "body": [
     "I wrote this down in May 2025 after thinking about agents from the vantage point of a morning spent comparing outputs instead of admiring them. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Agents seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250407-on-interface-trust-after-the-magic-show",
-      "title": "On interface trust after the magic show",
+      "title": "Interface trust is built out of small legible things",
       "note": "Written in April 2025."
     },
     {

@@ -1,8 +1,8 @@
 {
   "id": "20250814-a-note-on-personal-ai-as-the-tools-got-more-useful-and-less-theatrical",
   "slug": "20250814-a-note-on-personal-ai-as-the-tools-got-more-useful-and-less-theatrical",
-  "title": "A note on personal AI as the tools got more useful and less theatrical",
-  "summary": "A reflection on personal AI and the kind of world it quietly assumes.",
+  "title": "The strange intimacy problem inside personal AI",
+  "summary": "This one is about the odd intimacy of personal AI and the boundaries that keep it from becoming presumptuous.",
   "topic": "personal AI as the tools got more useful and less theatrical",
   "body": [
     "I wrote this down in August 2025 after thinking about personal AI from the vantage point of a whiteboard full of edge cases rather than aspirations. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Personal AI seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250802-the-problem-with-interface-trust-is-usually-the-strange-politics-of-delegating-j",
-      "title": "The problem with interface trust is usually the strange politics of delegating judgment",
+      "title": "A trustworthy interface should lower your heart rate",
       "note": "Written in August 2025."
     },
     {

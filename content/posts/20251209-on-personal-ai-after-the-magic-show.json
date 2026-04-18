@@ -1,8 +1,8 @@
 {
   "id": "20251209-on-personal-ai-after-the-magic-show",
   "slug": "20251209-on-personal-ai-after-the-magic-show",
-  "title": "On personal AI after the magic show",
-  "summary": "A reflection on personal AI and the kind of world it quietly assumes.",
+  "title": "Personal AI gets worse the moment it becomes generic",
+  "summary": "A post about personal AI and the way generic product logic can ruin something meant to feel specific.",
   "topic": "personal AI after the magic show",
   "body": [
     "I wrote this down in December 2025 after thinking about personal AI from the vantage point of a desktop crowded with small useful automations. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Personal AI seemed to me like a good way to keep the older question in view.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20251127-i-keep-coming-back-to-interface-trust",
-      "title": "I keep coming back to interface trust",
+      "title": "Interface trust is mostly about not making people guess",
       "note": "Written in November 2025."
     },
     {

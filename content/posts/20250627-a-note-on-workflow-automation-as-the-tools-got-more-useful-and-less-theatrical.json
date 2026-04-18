@@ -1,8 +1,8 @@
 {
   "id": "20250627-a-note-on-workflow-automation-as-the-tools-got-more-useful-and-less-theatrical",
   "slug": "20250627-a-note-on-workflow-automation-as-the-tools-got-more-useful-and-less-theatrical",
-  "title": "A note on workflow automation as the tools got more useful and less theatrical",
-  "summary": "A post about workflow automation as the tools got more useful and less theatrical, written against the temptation to make the future sound cleaner than it is.",
+  "title": "Automation is easy to love until nobody owns the edge cases",
+  "summary": "An essay on automation, ownership, and what happens when the edge cases stop belonging to anyone.",
   "topic": "workflow automation as the tools got more useful and less theatrical",
   "body": [
     "There was a version of workflow automation circulating in June 2025 that sounded inevitable. I have become suspicious of inevitability as a tone. It is usually a story people tell after they have quietly selected the conditions under which a trend looks obvious. Standing inside a whiteboard full of edge cases rather than aspirations, what I noticed instead was contingency: how much of the future depends on atmosphere, labor, trust, and timing, and how often those human variables are treated as background noise once a technical idea starts sounding important.",
@@ -15,7 +15,7 @@
   "references": [
     {
       "slug": "20250605-the-problem-with-evaluation-is-usually-what-happens-when-a-product-grows-more-co",
-      "title": "The problem with evaluation is usually what happens when a product grows more competent than legible",
+      "title": "Most evaluation problems are really trust problems",
       "note": "Written in June 2025."
     },
     {
