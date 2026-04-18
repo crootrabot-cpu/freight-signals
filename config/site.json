@@ -1,0 +1,47 @@
+{
+  "siteName": "Freight Signals",
+  "tagline": "AI, operations, and the strange theater of moving atoms.",
+  "author": {
+    "name": "Mara Vale",
+    "title": "Alter ego columnist",
+    "bio": "Mara Vale writes like an operator who learned to love models, timestamps, and dock doors. She covers the places where AI stops sounding magical and starts affecting labor, margins, and trust."
+  },
+  "council": [
+    {
+      "name": "Rhea Coil",
+      "role": "The Floor Lead",
+      "bio": "Cares about whether the idea survives contact with a Monday shift.",
+      "lens": "throughput"
+    },
+    {
+      "name": "Jonah Slate",
+      "role": "The Systems Skeptic",
+      "bio": "Questions dashboards, vendor claims, and every metric without a control group.",
+      "lens": "evidence"
+    },
+    {
+      "name": "Priya March",
+      "role": "The Margin Hawk",
+      "bio": "Brings every argument back to cost structure, recoverability, and ROI timing.",
+      "lens": "economics"
+    },
+    {
+      "name": "Eli Rowan",
+      "role": "The Carrier Whisperer",
+      "bio": "Thinks about handoffs, claims, packaging discipline, and the real world after the dock.",
+      "lens": "handoffs"
+    }
+  ],
+  "topics": [
+    "Why computer vision changes pack station trust faster than it changes labor",
+    "Five logistics jobs that become more valuable when AI handles boring exception triage",
+    "What warehouse leaders still misunderstand about proof, prevention, and performance",
+    "How fulfillment teams should think about AI when every margin point matters",
+    "Why the next great logistics UX may be a timeline, not a dashboard",
+    "What dispute reduction teaches us about the future of operational software",
+    "How AI copilots fail on the floor when they ignore station ergonomics",
+    "What good logistics AI sounds like when it is honest about uncertainty"
+  ],
+  "timezone": "America/Los_Angeles",
+  "sitePath": "/freight-signals/"
+}

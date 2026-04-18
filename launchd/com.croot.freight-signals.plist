@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.croot.freight-signals</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/ra_bot/projects/logistics-alter-ego-blog/scripts/run-loop.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/ra_bot/projects/logistics-alter-ego-blog</string>
+  <key>StartInterval</key>
+  <integer>600</integer>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/Users/ra_bot/projects/logistics-alter-ego-blog/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/ra_bot/projects/logistics-alter-ego-blog/logs/launchd.err.log</string>
+</dict>
+</plist>

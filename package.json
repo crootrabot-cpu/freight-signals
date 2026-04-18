@@ -1,0 +1,14 @@
+{
+  "name": "freight-signals",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/render-site.mjs",
+    "generate": "node scripts/generate-post.mjs",
+    "publish:once": "node scripts/publish.mjs",
+    "timer:start": "bash scripts/start-timer.sh",
+    "timer:stop": "bash scripts/stop-timer.sh",
+    "timer:status": "bash scripts/status-timer.sh"
+  }
+}
