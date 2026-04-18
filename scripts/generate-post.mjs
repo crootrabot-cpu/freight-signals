@@ -80,7 +80,7 @@ async function main() {
     generated = await generateWithProvider(promptFor(topic, config, createdAt, postNumber));
     generated.meta = {
       ...(generated.meta || {}),
-      provider: process.env.BLOG_AI_PROVIDER || (process.env.OPENAI_API_KEY ? 'openai' : process.env.ANTHROPIC_API_KEY ? 'anthropic' : process.env.GEMINI_API_KEY ? 'gemini' : 'fallback'),
+      provider: process.env.BLOG_AI_PROVIDER || (process.env.ARK_API_KEY ? 'ark' : process.env.OPENAI_API_KEY ? 'openai' : process.env.ANTHROPIC_API_KEY ? 'anthropic' : process.env.GEMINI_API_KEY ? 'gemini' : 'fallback'),
       approxWords: words((generated.listicle || []).join(' ')),
       sequence: postNumber
     };

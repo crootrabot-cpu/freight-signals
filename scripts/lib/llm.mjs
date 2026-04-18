@@ -7,6 +7,26 @@ function extractJson(text) {
   return JSON.parse(raw.slice(start, end + 1));
 }
 
+async function callArk(prompt) {
+  const baseUrl = process.env.ARK_BASE_URL || 'https://ark.ap-southeast.bytepluses.com/api/v3';
+  const model = process.env.ARK_MODEL || 'seed-2-0-pro-260328';
+  const response = await fetch(`${baseUrl}/chat/completions`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${process.env.ARK_API_KEY}`
+    },
+    body: JSON.stringify({
+      model,
+      messages: [{ role: 'user', content: prompt }]
+    })
+  });
+  if (!response.ok) throw new Error(`Ark ${response.status}: ${await response.text()}`);
+  const data = await response.json();
+  const text = data.choices?.[0]?.message?.content || '';
+  return extractJson(text);
+}
+
 async function callOpenAI(prompt) {
   const response = await fetch('https://api.openai.com/v1/responses', {
     method: 'POST',
@@ -63,11 +83,12 @@ async function callGemini(prompt) {
 
 export async function generateWithProvider(prompt) {
   const override = process.env.BLOG_AI_PROVIDER;
-  const providers = override ? [override] : ['openai', 'anthropic', 'gemini'];
+  const providers = override ? [override] : ['ark', 'openai', 'anthropic', 'gemini'];
   const errors = [];
 
   for (const provider of providers) {
     try {
+      if (provider === 'ark' && process.env.ARK_API_KEY) return await callArk(prompt);
       if (provider === 'openai' && process.env.OPENAI_API_KEY) return await callOpenAI(prompt);
       if (provider === 'anthropic' && process.env.ANTHROPIC_API_KEY) return await callAnthropic(prompt);
       if (provider === 'gemini' && process.env.GEMINI_API_KEY) return await callGemini(prompt);
