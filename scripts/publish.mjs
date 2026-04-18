@@ -12,8 +12,9 @@ async function run(command, args) {
 }
 
 async function main() {
-  await run('node', [path.join('scripts', 'generate-post.mjs')]);
-  await run('node', [path.join('scripts', 'render-site.mjs')]);
+  const nodeBin = process.execPath;
+  await run(nodeBin, [path.join('scripts', 'generate-post.mjs')]);
+  await run(nodeBin, [path.join('scripts', 'render-site.mjs')]);
   await run('git', ['add', 'content/posts', 'docs', 'config', 'scripts', 'launchd', 'README.md', '.blog.env.example', '.gitignore', 'package.json']);
 
   try {
