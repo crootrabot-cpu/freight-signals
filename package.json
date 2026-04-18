@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/render-site.mjs",
     "generate": "node scripts/generate-post.mjs",
+    "publish:local": "BLOG_SOURCE_MODE=local-only node scripts/publish.mjs",
     "publish:once": "node scripts/publish.mjs",
     "timer:start": "bash scripts/start-timer.sh",
     "timer:stop": "bash scripts/stop-timer.sh",

@@ -2,6 +2,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import path from 'node:path';
 import { projectRoot } from './lib/site.mjs';
+import { importNextLocalDraft } from './lib/local-drafts.mjs';
 
 const execFileAsync = promisify(execFile);
 
@@ -13,9 +14,23 @@ async function run(command, args) {
 
 async function main() {
   const nodeBin = process.execPath;
-  await run(nodeBin, [path.join('scripts', 'generate-post.mjs')]);
+  const mode = process.env.BLOG_SOURCE_MODE || 'generate-only';
+  const useLocalDrafts = mode === 'local-only' || mode === 'local-first';
+  const localResult = useLocalDrafts ? await importNextLocalDraft() : { kind: 'none' };
+
+  if (localResult.kind === 'none' && mode === 'local-only') {
+    console.log('No pending local drafts to publish.');
+    return;
+  }
+
+  if (localResult.kind === 'none') {
+    await run(nodeBin, [path.join('scripts', 'generate-post.mjs')]);
+  } else {
+    console.log(`Imported local draft: ${localResult.sourceFile}`);
+  }
+
   await run(nodeBin, [path.join('scripts', 'render-site.mjs')]);
-  await run('git', ['add', 'content/posts', 'docs', 'config', 'scripts', 'launchd', 'README.md', '.blog.env.example', '.gitignore', 'package.json']);
+  await run('git', ['add', 'content/posts', 'content/drafts', 'docs', 'config', 'scripts', 'launchd', 'README.md', '.blog.env.example', '.gitignore', 'package.json']);
 
   try {
     await run('git', ['commit', '-m', `post: ${new Date().toISOString()}`]);
