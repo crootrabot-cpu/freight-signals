@@ -108,8 +108,9 @@ function scheduleDatesForYear(year, count) {
   const dates = [];
   for (let i = 0; i < count; i += 1) {
     const ratio = count === 1 ? 0 : i / (count - 1);
-    const jitterDays = ((i % 3) - 1) * 1.6;
-    const ms = start.getTime() + span * ratio + jitterDays * 24 * 60 * 60 * 1000;
+    const jitterDays = year === 2026 && i === count - 1 ? 0 : ((i % 3) - 1) * 1.6;
+    const rawMs = start.getTime() + span * ratio + jitterDays * 24 * 60 * 60 * 1000;
+    const ms = Math.min(end.getTime(), Math.max(start.getTime(), rawMs));
     dates.push(new Date(ms));
   }
   return dates;

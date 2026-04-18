@@ -28,12 +28,13 @@ function renderFooter(config) {
 }
 
 function layout({ title, body, config }) {
+  const pageTitle = title === config.siteName ? config.siteName : `${title} | ${config.siteName}`;
   return `<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${escapeHtml(title)} | ${escapeHtml(config.siteName)}</title>
+  <title>${escapeHtml(pageTitle)}</title>
   <meta name="description" content="${escapeHtml(config.tagline)}" />
   <link rel="stylesheet" href="${siteBase(config)}assets/styles.css" />
 </head>
