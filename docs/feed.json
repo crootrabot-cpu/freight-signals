@@ -1,5 +1,48 @@
 [
   {
+    "id": "202604181809-when-we-say-a-model-learned-x-we-almost-never-mean-the-same-thing-twice",
+    "slug": "202604181809-when-we-say-a-model-learned-x-we-almost-never-mean-the-same-thing-twice",
+    "topic": "The quiet epistemology inside every 'the model learned X' claim",
+    "title": "When we say a model 'learned X', we almost never mean the same thing twice",
+    "summary": "This post unpacks the unstated, unexamined assumptions hiding inside every casual claim that an AI model has learned some concept or capability.",
+    "listicle": [
+      "No field has agreed on a single definition of what it even means for a model to \"learn\" something. Not even the papers making the claims.",
+      "Nearly always this just means the model passed one specific test case. That is not learning. That is passing that test.",
+      "This is the same mistake 1970s mouse maze researchers made: running a maze is not understanding mazes.",
+      "We are currently mapping model capabilities with the precision of 1600s ocean cartographers. Most edges are wrong.",
+      "I don't know when this will get fixed. No one does. That is the quiet part no one says out loud."
+    ],
+    "thread": [
+      "Notice no one ever publishes all the tests the model failed before they found the one it passed.",
+      "It is entirely possible for a model to score 100% on a test while possessing zero of the property the test claims to measure.",
+      "The hardest part of this problem is not technical. There are very strong incentives to leave this ambiguity intact.",
+      "For now: substitute \"passed one test designed to look for X\" every time you read \"learned X\". That is far closer to the truth."
+    ],
+    "criticNotes": [
+      {
+        "critic": "Rhea Coil",
+        "role": "foundations",
+        "note": "You stop too early. The actual gap is we have no working theory of what knowledge even is for any system that is not human."
+      },
+      {
+        "critic": "Jonah Slate",
+        "role": "evidence",
+        "note": "Worse: half the papers don't even disclose how many test variants they ran before getting a positive result. This is p-hacking by another name."
+      },
+      {
+        "critic": "Priya March",
+        "role": "clarity",
+        "note": "You still did not give one plain language rule for when it is actually fair to say a model learned something. Don't dodge that."
+      }
+    ],
+    "meta": {
+      "provider": "ark",
+      "approxWords": 102,
+      "sequence": 18
+    },
+    "createdAt": "2026-04-18T18:09:52.398Z"
+  },
+  {
     "id": "202604181804-how-to-read-an-ai-paper-find-the-one-experiment-that-would-break-it",
     "slug": "202604181804-how-to-read-an-ai-paper-find-the-one-experiment-that-would-break-it",
     "topic": "How to read an AI paper the way Feynman would — checking the one experiment that would break it",
