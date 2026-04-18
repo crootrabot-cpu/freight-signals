@@ -1,0 +1,34 @@
+{
+  "id": "20240927-a-note-on-interface-trust-when-reliability-turned-out-to-be-the-whole-game",
+  "slug": "20240927-a-note-on-interface-trust-when-reliability-turned-out-to-be-the-whole-game",
+  "title": "A note on interface trust when reliability turned out to be the whole game",
+  "summary": "A personal essay about interface trust, and the longer argument hidden inside the long argument between autonomy and auditability.",
+  "topic": "interface trust when reliability turned out to be the whole game",
+  "body": [
+    "I wrote this down in September 2024 after thinking about interface trust from the vantage point of a train ride where the future looked mostly like error handling. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Interface trust seemed to me like a good way to keep the older question in view.",
+    "The mechanism that interested me most was not the one usually highlighted in public. Public language likes the visible move: the robot, the interface, the model, the service layer. But most technologies become socially important through a second-order effect. They change pacing. They change who gets to stay generalist and who is forced to become legible to the machine. They change what can be ignored because some hidden workflow now catches it. Once you notice that shift, interface trust stops looking like a gadget and starts looking like a theory of everyday life with a power source attached.",
+    "There is also the old problem of atmosphere. Some technologies make people feel more room around themselves. Others make every surface feel like an input. That difference is easy to underrate because it does not show up cleanly in a benchmark. But mood is one of the outputs. If a system consistently narrows attention, thickens bureaucracy, or turns daily life into a sequence of small permissions, that is not accidental collateral. It is part of what the product is. I have never been persuaded by arguments that treat human texture as a sentimental side issue next to performance.",
+    "Looking back from September 2024, I could already feel my own position shifting. A few months earlier I had written “The problem with memory systems is usually the difference between an assistant and a dependency,” and the difference between that piece and this one is instructive. In that earlier note I was still describing the surface appeal. Here I was more interested in what happens after the applause: the maintenance burden, the political assumptions, the quiet social sorting, the emotional contract being drafted between human beings and the systems now arranging their choices. I do not think that earlier optimism was wrong, exactly. It was just incomplete in a way optimism often is when the machinery has not yet touched enough lives.",
+    "I do not think the goal is to become anti-technology out of self-defense. The better goal is to become harder to flatter. We can admire good tools without surrendering the right to ask what world they are quietly assembling around themselves. If that sounds like a modest ambition, good. Most of the sanest writing I know begins modestly. It begins by refusing the oversized story until the smaller one proves it deserves to grow. That is a lesson I hear again when I reread “A note on homebound automation when the infrastructure finally became visible.”",
+    "A final note to myself from September 2024: the useful test is not whether a technology makes me feel early, but whether it makes the surrounding world more durable, more legible, and a little more generous. I have become less interested in winning the argument about what comes next than in noticing what a given tool seems to ask of the people nearest to it. If that sounds less glamorous than prediction, good. The glamorous version is usually how we miss the part that matters."
+  ],
+  "references": [
+    {
+      "slug": "20240913-the-problem-with-memory-systems-is-usually-the-difference-between-an-assistant-a",
+      "title": "The problem with memory systems is usually the difference between an assistant and a dependency",
+      "note": "Written in September 2024."
+    },
+    {
+      "slug": "20210817-a-note-on-homebound-automation-when-the-infrastructure-finally-became-visible",
+      "title": "A note on homebound automation when the infrastructure finally became visible",
+      "note": "Written in August 2021."
+    }
+  ],
+  "createdAt": "2024-09-27T04:31:02.068Z",
+  "meta": {
+    "provider": "archive-rebuild",
+    "sequence": 108,
+    "approxWords": 601,
+    "era": "agentic correction"
+  }
+}

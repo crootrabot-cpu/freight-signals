@@ -1,0 +1,34 @@
+{
+  "id": "20250529-on-local-inference-after-the-magic-show",
+  "slug": "20250529-on-local-inference-after-the-magic-show",
+  "title": "On local inference after the magic show",
+  "summary": "A reflection on local inference and the kind of world it quietly assumes.",
+  "topic": "local inference after the magic show",
+  "body": [
+    "There was a version of local inference circulating in May 2025 that sounded inevitable. I have become suspicious of inevitability as a tone. It is usually a story people tell after they have quietly selected the conditions under which a trend looks obvious. Standing inside a desktop crowded with small useful automations, what I noticed instead was contingency: how much of the future depends on atmosphere, labor, trust, and timing, and how often those human variables are treated as background noise once a technical idea starts sounding important.",
+    "Part of what keeps this topic interesting is that it resists clean ideological sorting. Local inference can look emancipatory when you focus on drudgery leaving the picture, and unsettling when you look at how quickly convenience hardens into expectation. Both reactions are real. The adult version of the conversation has to hold them at the same time. I do not think skepticism means refusing tools. I think it means asking what the tool is teaching us about obedience, attention, and scale while we are busy admiring how much friction it has removed.",
+    "In 2025, the social texture around all of this mattered as much as the technical substance. People were not just adopting systems; they were auditioning identities through them. Some wanted to look early. Some wanted to look rigorous. Some wanted relief from tasks that had become exhausting, repetitive, or plainly stupid. I sympathized with all of that. But the cultural story was moving faster than the evidence. The risk there is not only bad prediction. It is that you end up building institutions around a feeling, and institutions are much harder to unwind than a hot take in a group chat.",
+    "Over time I have learned to pay close attention to what disappears from a story once people start repeating it professionally. Usually it is the same cluster of missing pieces: labor, error handling, emotional load, repair, governance, and the uneven distribution of inconvenience. Local inference looked different to me once I framed it that way. What had first appeared as a sleek solution started to read more like a bundle of trade-offs with a persuasive publicist. That does not make the thing useless. It just makes it legible again, which is often the first real service criticism can provide.",
+    "Maybe that is the real use of an archive like this one. It lets me see not only what the technologies were doing, but what I was learning to notice. The tools change. The language changes. The market changes its costume every six months. What stays interesting is the slower shift in what feels normal, what feels extractive, and what still feels worth wanting. Local inference sat right in the middle of that drift, which is why I kept turning it over until it revealed more than its own sales pitch.",
+    "A final note to myself from May 2025: the useful test is not whether a technology makes me feel early, but whether it makes the surrounding world more durable, more legible, and a little more generous. I have become less interested in winning the argument about what comes next than in noticing what a given tool seems to ask of the people nearest to it. If that sounds less glamorous than prediction, good. The glamorous version is usually how we miss the part that matters."
+  ],
+  "references": [
+    {
+      "slug": "20250407-on-interface-trust-after-the-magic-show",
+      "title": "On interface trust after the magic show",
+      "note": "Written in April 2025."
+    },
+    {
+      "slug": "20220222-what-research-theater-taught-me-about-building-futures",
+      "title": "What research theater taught me about building futures",
+      "note": "Written in February 2022."
+    }
+  ],
+  "createdAt": "2025-05-29T17:24:00.000Z",
+  "meta": {
+    "provider": "archive-rebuild",
+    "sequence": 130,
+    "approxWords": 556,
+    "era": "agentic correction"
+  }
+}

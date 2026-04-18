@@ -1,0 +1,34 @@
+{
+  "id": "20240613-i-keep-coming-back-to-ambient-assistants",
+  "slug": "20240613-i-keep-coming-back-to-ambient-assistants",
+  "title": "I keep coming back to ambient assistants",
+  "summary": "An essay on ambient assistants, with one eye on the machinery and one eye on the people asked to live with it.",
+  "topic": "ambient assistants as the tools got more useful and less theatrical",
+  "body": [
+    "I wrote this down in June 2024 after thinking about ambient assistants from the vantage point of an office where the exciting part was no longer the model but the glue. What interested me was not the headline version of the topic, but the more durable question underneath it: what sort of world does this idea assume is waiting for it? With technology, that is usually the first thing to disappear. We talk about capability before context, performance before maintenance, scale before whether the thing makes life feel more inhabitable. Ambient assistants seemed to me like a good way to keep the older question in view.",
+    "The mechanism that interested me most was not the one usually highlighted in public. Public language likes the visible move: the robot, the interface, the model, the service layer. But most technologies become socially important through a second-order effect. They change pacing. They change who gets to stay generalist and who is forced to become legible to the machine. They change what can be ignored because some hidden workflow now catches it. Once you notice that shift, ambient assistants stops looking like a gadget and starts looking like a theory of everyday life with a power source attached.",
+    "There is also the old problem of atmosphere. Some technologies make people feel more room around themselves. Others make every surface feel like an input. That difference is easy to underrate because it does not show up cleanly in a benchmark. But mood is one of the outputs. If a system consistently narrows attention, thickens bureaucracy, or turns daily life into a sequence of small permissions, that is not accidental collateral. It is part of what the product is. I have never been persuaded by arguments that treat human texture as a sentimental side issue next to performance.",
+    "Looking back from June 2024, I could already feel my own position shifting. I kept thinking about an older post of mine, “On memory systems while everyone tried to make software feel responsible,” from April 2024. In that earlier note I was still describing the surface appeal. Here I was more interested in what happens after the applause: the maintenance burden, the political assumptions, the quiet social sorting, the emotional contract being drafted between human beings and the systems now arranging their choices. I do not think that earlier optimism was wrong, exactly. It was just incomplete in a way optimism often is when the machinery has not yet touched enough lives.",
+    "I do not think the goal is to become anti-technology out of self-defense. The better goal is to become harder to flatter. We can admire good tools without surrendering the right to ask what world they are quietly assembling around themselves. If that sounds like a modest ambition, good. Most of the sanest writing I know begins modestly. It begins by refusing the oversized story until the smaller one proves it deserves to grow. That is a lesson I hear again when I reread “On mutual aid apps when the world stopped pretending slack was infinite.”",
+    "A final note to myself from June 2024: the useful test is not whether a technology makes me feel early, but whether it makes the surrounding world more durable, more legible, and a little more generous. I have become less interested in winning the argument about what comes next than in noticing what a given tool seems to ask of the people nearest to it. If that sounds less glamorous than prediction, good. The glamorous version is usually how we miss the part that matters."
+  ],
+  "references": [
+    {
+      "slug": "20240425-on-memory-systems-while-everyone-tried-to-make-software-feel-responsible",
+      "title": "On memory systems while everyone tried to make software feel responsible",
+      "note": "Written in April 2024."
+    },
+    {
+      "slug": "20210605-on-mutual-aid-apps-when-the-world-stopped-pretending-slack-was-infinite",
+      "title": "On mutual aid apps when the world stopped pretending slack was infinite",
+      "note": "Written in June 2021."
+    }
+  ],
+  "createdAt": "2024-06-13T00:53:47.586Z",
+  "meta": {
+    "provider": "archive-rebuild",
+    "sequence": 99,
+    "approxWords": 595,
+    "era": "agentic correction"
+  }
+}

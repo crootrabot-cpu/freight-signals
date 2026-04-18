@@ -1,13 +1,12 @@
 {
-  "siteName": "Mara Vale",
-  "tagline": "Notes on AI, judgment, and the habit of paying attention.",
+  "siteName": "In Dust We Trust",
+  "tagline": "Technology, culture, and the futures we keep rehearsing.",
   "author": {
     "name": "Mara Vale",
     "title": "Writer",
-    "bio": "Mara Vale writes short essays about AI, research claims, and the places where language gets ahead of evidence. The tone is personal, skeptical, and plainspoken on purpose."
+    "bio": "Mara Vale has been writing online for years about technology, cities, art, AI, and the feeling that the future arrives as a texture before it arrives as policy. The voice is personal, observant, and a little suspicious of grand narratives."
   },
-  "homeIntro": "Short essays about AI, evidence, and the ordinary discipline of saying less than you can get away with.",
-  "sidebarNote": "This is meant to read like a real person's working notebook, not a content machine. The point is clarity, not volume.",
+  "homeIntro": "A long-running notebook that starts in 2018 with desert optimism and follows the strange path from robot dreams to AI reality.",
   "council": [
     {
       "name": "Rhea Coil",
